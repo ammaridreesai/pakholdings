@@ -5,23 +5,23 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full">
+    <div className=" w-full">
       {/* Image Section with Custom Height */}
       <div className="">
         <Image
           src={HeroSectionImage}
           alt="Hero Image"
           layout="responsive" // Use responsive to maintain the aspect ratio
-          width={1440} // You can set the width here
-          height={500} // Set a custom height
+          // width={1440} // You can set the width here
+          // height={500} // Set a custom height
           objectFit="cover"
         />
       </div>
 
       {/* Content Section with Grid */}
-      <div className="relative inset- flex justify-center items-center gap-[180px bg-[#053624] lg:px-[64px] ">
+      <div className=" inset- flex justify-center items-center gap-[180px bg-[#053624] lg:px-[64px] ">
         <div className="w-full max-w-8xl px-4 sm:px-8 lg:px-0 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-white  lg:text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-12 text-white  lg:text-left">
             {/* Left Grid with Heading */}
             <div className="lg:flex lg:flex-col lg:justify-center lg:items-start">
               <h1 className="lg:text-[56px] text-[40px]  font-medium mb-4 lg:max-w-lg leading-[64px] ">
@@ -40,7 +40,7 @@ const HeroSection = () => {
               <div className="flex justify-center lg:justify-start space-x-4">
                 {/* View Projects Button */}
                 <Link
-                  href="/projects"
+                  href="#"
                   className="px-[24px] py-[10px] bg-green-600 text-white rounded-[12px] shadow-lg"
                 >
                   View Projects
@@ -48,7 +48,7 @@ const HeroSection = () => {
 
                 {/* Learn More Button */}
                 <Link
-                  href="/about"
+                  href="#"
                   className="px-[24px] py-[10px] bg-transparent text-white rounded-[12px] border-1 border-white shadow-lg hover:shadow-lg hover:bg-white hover:text-black"
                 >
                   Learn More

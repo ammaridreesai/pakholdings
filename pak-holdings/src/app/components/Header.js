@@ -1,42 +1,87 @@
-// components/Navbar.js
-import Link from 'next/link';
+"use client"; // Add this line to mark the file as a client component
+
+import Link from "next/link";
+import { useState } from "react";
 import "@fontsource/albert-sans";
+import MenuIcon from "@mui/icons-material/Menu"; // Import Menu Icon from MUI
+import CloseIcon from "@mui/icons-material/Close"; // Import Close Icon from MUI
 
 const Navbar = () => {
-    return (
-        <nav className="bg-[#053624] p-4 flex justify-between items-center h-[72px] font-medium  ">
-            <div className="flex items-center ml-[64px] text-2xl text-white">
-                <Link href="/">
-                    <img
-                        src="https://flowbite.com/docs/images/logo.svg"
-                        className="h-8"
-                        alt="Flowbite Logo"
-                    />
-                    {/* Logo */}
-                </Link>
-                <div className="space-x-[32px] text-white ml-[24px] lg:block hidden">
-                    <Link href="/" className=" text-[16px] leading-[64px]">
-                        Home Page
-                    </Link>
-                    <Link href="/about" className=" text-[16px] leading-[64px]">
-                        About Us
-                    </Link>
-                    <Link href="/services" className=" text-[16px] leading-[64px]">
-                        Our Services
-                    </Link>
-                    <Link href="/contact" className=" text-[16px] leading-[64px]">
-                        Contact Us
-                    </Link>
-                </div>
-            </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-            <div className="flex space-x-4 mr-[64px]">
-                <button className="px-4 py-2 text-white bg-green-500 shadow-md rounded-[12px]">
-                    Contact
-                </button>
-            </div>
-        </nav>
-    );
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav className="bg-[#053624] p-4  flex justify-between items-center h-[72px] font-medium">
+      {/* Logo on the left */}
+      <div className="flex items-center text-2xl text-white lg:px-16">
+        <Link href="/">
+          {/* <img
+            src="https://flowbite.com/docs/images/logo.svg"
+            className="h-8"
+            alt="Flowbite Logo"
+          /> */}
+          Logo
+        </Link>
+      </div>
+
+      {/* Navbar Links for larger screens aligned to the left */}
+      <div className="space-x-[32px] text-white flex lg:flex-row lg:ml-[24px ml-0 lg:block hidden">
+        <Link href="/" className="text-[16px] leading-[64px]">
+          Home Page
+        </Link>
+        <Link href="#" className="text-[16px] leading-[64px]">
+          About Us
+        </Link>
+        <Link href="#" className="text-[16px] leading-[64px]">
+          Our Services
+        </Link>
+        <Link href="#" className="text-[16px] leading-[64px]">
+          Contact Us
+        </Link>
+      </div>
+
+      {/* Hamburger menu for small and medium screens */}
+      <button
+        className="lg:hidden text-white text-3xl ml-auto"
+        onClick={toggleMenu}
+      >
+        {isOpen ? <CloseIcon /> : <MenuIcon />}
+      </button>
+
+      {/* Navbar Links for small and medium screens */}
+      <div
+        className={`lg:hidden ${
+          isOpen ? "block" : "hidden"
+        } absolute top-[72px] left-0 w-full h-auto bg-[#053624] text-white p-4`}
+      >
+        <Link href="/" className="block text-[16px] leading-[64px]">
+          Home Page
+        </Link>
+        <Link href="#" className="block text-[16px] leading-[64px]">
+          About Us
+        </Link>
+        <Link href="#" className="block text-[16px] leading-[64px]">
+          Our Services
+        </Link>
+        <Link href="#" className="block text-[16px] leading-[64px]">
+          Contact Us
+        </Link>
+      </div>
+
+      {/* Contact Button for larger screens */}
+      <div className="lg:block hidden flex space-x-4 mr-[64px]">
+        <Link
+          className="px-4 py-3 text-white bg-green-500 shadow-md rounded-[12px]"
+          href="#"
+        >
+          Contact
+        </Link>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
