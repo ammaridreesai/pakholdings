@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="bg-[#053624] p-4 flex justify-between items-center h-[72px] font-medium relative">
       {/* Left side: Logo and Links */}
       <div className="flex items-center">
-        <div className="text-2xl text-white lg:px-16">
+        <div className="lg:px-16">
           <Link href="/">
             <Image className="" src={logo} alt="logo" />
           </Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
       {/* Right side: Contact Button (large screens) */}
       <div className="hidden lg:block mr-[64px]">
         <Link
-          className="px-4 py-3 text-white bg-green-500 shadow-md rounded-[12px]"
+          className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
           href="#"
         >
           Contact
@@ -52,7 +52,7 @@ const Navbar = () => {
 
       {/* Hamburger (small screens) */}
       <button
-        className="lg:hidden text-white text-3xl ml-auto"
+        className="lg:hidden text-white text-3xl ml-auto mr-4"
         onClick={toggleMenu}
       >
         {isOpen ? <CloseIcon /> : <MenuIcon />}
@@ -74,7 +74,7 @@ const Navbar = () => {
             Contact Us
           </Link>
           <Link
-            className="block mt-4 px-4 py-3 text-white bg-green-500 shadow-md rounded-[12px] text-center"
+            className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
             href="#"
           >
             Contact

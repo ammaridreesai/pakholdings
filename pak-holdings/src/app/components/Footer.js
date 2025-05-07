@@ -1,6 +1,9 @@
 "use client"; // Add this line to mark the file as Link client component
 
 import Link from "next/link";
+import logo from "../../../public/Images/company-logo.svg";
+import Image from "next/image";
+import { Facebook, Instagram, Twitter, LinkedIn, YouTube } from '@mui/icons-material';
 const Footer = () => {
   return (
     <footer className="w-full bg-black text-white">
@@ -8,13 +11,12 @@ const Footer = () => {
         {/* <!--Grid--> */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
           <div className="col-span-full mb-10 lg:col-span-3 lg:mb-0">
-            <Link
-              href="/"
-              className="flex justify-center lg:justify-start text-2xl"
-            >
-              LOGO
-            </Link>
-            <p className="py-8 text-sm  lg:max-w-sm text-center lg:text-left">
+            <div className="">
+              <Link href="/">
+                <Image className="" src={logo} alt="logo" />
+              </Link>
+            </div>
+            <p className="py-8 text-sm  lg:max-w-sm text-start lg:text-left">
               Subscribe to our newsletter for the latest updates on features and
               releases.
             </p>
@@ -34,12 +36,12 @@ const Footer = () => {
               </div>
               <button
                 type="submit"
-                className="ml-4 px-[24px] py-[10px] bg-transparent border border-gray-700 text-white rounded-[12px] shadow-lg"
+                className="cursor-pointer ml-2 flex items-center justify-center w-[100px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#252424] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
               >
                 Join
               </button>
             </form>
-            <p className="py-8 text-sm  lg:max-w-lg text-center lg:text-left">
+            <p className="py-8 text-sm  lg:max-w-lg text-start lg:text-left">
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates.
             </p>
@@ -123,30 +125,36 @@ const Footer = () => {
           </div> */}
           {/* <!--End Col--> */}
           <div className="lg:mx-auto text-left">
-            <h4 className="text-[16px]   font-medium mb-7">Connect With Us</h4>
-            <ul className="text-sm  transition-all duration-500">
-              <li className="mb-6">
-                <Link href="javascript:;" className="  hover: ">
+            <h4 className="text-[16px] font-medium mb-7">Connect With Us</h4>
+            <ul className="text-sm transition-all duration-500">
+              <li className="mb-6 flex items-center">
+                <Facebook className="mr-3 rounded-full " /> {/* Facebook Icon */}
+                <Link href="javascript:;" className="">
                   Facebook
                 </Link>
               </li>
-              <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
+
+              <li className="mb-6 flex items-center">
+                <Instagram className="mr-3 " /> {/* Instagram Icon */}
+                <Link href="javascript:;" className="">
                   Instagram
                 </Link>
               </li>
-              <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
+              <li className="mb-6 flex items-center">
+                <Twitter className="mr-3 " /> {/* Twitter (X) Icon */}
+                <Link href="javascript:;" className="">
                   X
                 </Link>
               </li>
-              <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
+              <li className="mb-6 flex items-center">
+                <LinkedIn className="mr-3 " /> {/* LinkedIn Icon */}
+                <Link href="javascript:;" className="">
                   LinkedIn
                 </Link>
               </li>
-              <li>
-                <Link href="javascript:;" className="   hover: ">
+              <li className="flex items-center">
+                <YouTube className="mr-3 " /> {/* YouTube Icon */}
+                <Link href="javascript:;" className="">
                   YouTube
                 </Link>
               </li>
@@ -187,3 +195,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

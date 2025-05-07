@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const HomeStats = () => {
   return (
-    <div className="py-16 bg-[#0D3B2A]">
+    <div className="py-16 bg-[#001F17]">
       <div className="max-w-screen-x mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-16">
         {/* Left Side: Text */}
         <div className="flex flex-col items-start justify-center text-start lg:text-left">
@@ -29,12 +29,12 @@ const HomeStats = () => {
               </p>
             </div>
           </div>
-          {/* <Link
-            href="/projects"
-            className="px-6 py-3 mt-[20px]  text-white font-semibold rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+          <Link
+            href="#"
+            className=" mt-[50px]  flex items-center justify-center w-[98px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#01503c] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
           >
-            Learn More
-          </Link> */}
+            Button
+          </Link>
         </div>
 
         {/* Right Side: Video */}

@@ -1,4 +1,7 @@
-'use client'; // Add this line to mark the file as a client component
+'use client';
+import Link from "next/link";
+
+ // Add this line to mark the file as a client component
 
 const Banner = () => {
   return (
@@ -12,12 +15,12 @@ const Banner = () => {
 
         {/* Buttons Section */}
         <div className="flex flex- sm:flex-row space-x-4 px-4">
-          <button className="md:px-6 px-2 py-3 bg-green-500 text-white font-normal rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 whitespace-nowrap">
+          <Link href="#" className="flex items-center justify-center w-[177px]  h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] whitespace-nowrap">
             Become a Partner
-          </button>
-          <button className="md:px-6 px-2 py-3 bg-gray-700 text-white font-normal rounded-lg shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 whitespace-nowrap">
+          </Link>
+          <Link href="#"  className="flex items-center justify-center md:w-[177px] w-[130px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px] whitespace-nowrap">
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </div>

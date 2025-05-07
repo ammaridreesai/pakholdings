@@ -11,12 +11,12 @@ const ValueSection = () => {
   return (
     <div className="bg-[#CCE1DB] py-16">
       <div className="text-center mb-16">
-        <p className="mb-2 text-base sm:text-lg md:text-xl">Portfolio</p>
+        <p className="mb-2 text-base sm:text-lg md:text-xl">Value</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
-          Explore Our Diverse Ventures
+          Short heading goes here
         </h2>
         <p className="text-[16px]">
-          Discover our innovative projects in retail and real estate.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>
 

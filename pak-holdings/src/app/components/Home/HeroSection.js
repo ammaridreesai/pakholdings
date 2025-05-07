@@ -42,7 +42,7 @@ const HeroSection = () => {
                 {/* View Projects Button */}
                 <Link
                   href="#"
-                  className="px-[24px] py-[10px] bg-green-600 text-white rounded-[12px] shadow-lg"
+                  className="flex items-center justify-center md:w-[177px] w-[140px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px]"
                 >
                   View Projects
                 </Link>
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 {/* Learn More Button */}
                 <Link
                   href="#"
-                  className="px-[24px] py-[10px] bg-transparent text-white rounded-[12px] border-1 border-white shadow-lg hover:shadow-lg hover:bg-white hover:text-black"
+                  className="flex items-center justify-center md:w-[177px] w-[130px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
                 >
                   Learn More
                 </Link>
