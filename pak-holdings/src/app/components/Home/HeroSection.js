@@ -1,3 +1,4 @@
+"use client";
 // components/HeroSection.js
 import Image from "next/image"; // Import Image component for optimized images
 import HeroSectionImage from "../../../../public/Images/Placeholder-Image.png";
@@ -32,7 +33,7 @@ const HeroSection = () => {
             {/* Right Grid with Paragraph and Buttons */}
             <div className="flex flex-col justify-start items-center lg:items-start ">
               <p className="text-[18px] font-medium mb-[32px] max-w-3xl mx-auto lg:mx-0 leading-[150%]">
-                At Pakholding, we are dedicated to creating innovative retail
+                At Pak holdings, we are dedicated to creating innovative retail
                 and lifestyle spaces that inspire and engage. Our mission is to
                 redefine the landscape of investment and development through
                 strategic insights and exceptional execution.
