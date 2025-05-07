@@ -11,8 +11,8 @@ const HomeStats = () => {
             Medium length section heading goes here
           </h2>
           <p className="text-[18px] sm:text-[16px] text-[#fff] mb-6">
-            At Pakholding, we pride ourselves on our significant milestones and
-            impactful projects. Our statistics reflect our commitment to
+            At Pak Holdings, we pride ourselves on our significant milestones
+            and impactful projects. Our statistics reflect our commitment to
             excellence and innovation in every venture.
           </p>
           <div className="grid grid-cols-2 gap-8">
