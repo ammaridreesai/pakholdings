@@ -5,6 +5,8 @@ import { useState } from "react";
 import "@fontsource/albert-sans";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import Image from "next/image";
+import logo from "../../../public/Images/company-logo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +18,9 @@ const Navbar = () => {
       {/* Left side: Logo and Links */}
       <div className="flex items-center">
         <div className="text-2xl text-white lg:px-16">
-          <Link href="/">Logo</Link>
+          <Link href="/">
+            <Image className="" src={logo} alt="logo" />
+          </Link>
         </div>
 
         {/* Nav Links - large screens only */}

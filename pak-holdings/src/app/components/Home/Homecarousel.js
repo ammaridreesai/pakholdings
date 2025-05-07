@@ -53,10 +53,9 @@ const Homecarousel = () => {
         {/* Carousel Item */}
         <div className="text-center">
           <p className="text-[20px] md:text-[24px] sm:text-2xl font-normal mb-4">
-            <p className="text-[20px] md:text-[24px] sm:text-2xl font-normal mb-4">
-              &quot;{testimonials[currentIndex].quote}&quot;
-            </p>
+            &quot;{testimonials[currentIndex].quote}&quot;
           </p>
+
           <div className="flex flex-col justify-center items-center space-y-8 mt-8">
             <img
               src={testimonials[currentIndex].image}
