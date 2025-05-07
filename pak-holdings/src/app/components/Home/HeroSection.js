@@ -37,7 +37,7 @@ const HeroSection = () => {
                 redefine the landscape of investment and development through
                 strategic insights and exceptional execution.
               </p>
-              <div className="flex justify-center lg:justify-start space-x-4">
+              <div className="flex justify-center lg:justify-start space-x-4 whitespace-nowrap">
                 {/* View Projects Button */}
                 <Link
                   href="#"

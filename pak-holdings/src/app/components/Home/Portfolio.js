@@ -22,7 +22,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="max-w-screen-2xl mx-auto p-5 sm:p-10 md:p-16">
+        <div className="max-w-screen-2x mx-auto p-5 sm:p-10 md:p-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
             {/* First Grid Row */}
             <div className="grid gap-8">

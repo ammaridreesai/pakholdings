@@ -5,20 +5,20 @@ const Footer = () => {
     <footer className="w-full bg-black text-white">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-16">
         {/* <!--Grid--> */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
-          <div className="col-span-full mb-10 lg:col-span-3 lg:mb-0">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5  py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
+          <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
             <a
               href="/"
               className="flex justify-center lg:justify-start text-2xl"
             >
               LOGO
             </a>
-            <p className="py-8 text-sm  lg:max-w-sm text-center lg:text-left">
+            <p className="py-8 text-sm  lg:max-w-sm lg:text-center lg:text-left">
               Subscribe to our newsletter for the latest updates on features and
               releases.
             </p>
 
-            <form className="flex items-center max-w-lg mx-aut">
+            <form className="flex lg:flex-cols max-w-lg lg:mx-0 mx-auto">
               <label for="voice-search" className="sr-only">
                 Search
               </label>
@@ -38,7 +38,7 @@ const Footer = () => {
                 Join
               </button>
             </form>
-            <p className="py-8 text-sm  lg:max-w-lg text-center lg:text-left">
+            <p className="py-8 text-sm  lg:max-w-lg lg:text-center lg:text-left">
             By subscribing, you agree to our Privacy Policy and consent to receive updates.
             </p>
           </div>
@@ -182,7 +182,7 @@ const Footer = () => {
           </div>
         </div>
         {/* <!--Grid--> */}
-        <div className="py-7 border-t border-gray-200">
+        <div className="py-7 border-t border-gray-200 whitespace-nowrap">
           <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
             <span className="text-sm  ">
               ©<a href="/"> pakholdings</a> 2024, All rights

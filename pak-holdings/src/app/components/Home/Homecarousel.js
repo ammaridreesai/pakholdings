@@ -48,7 +48,7 @@ const Homecarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black text-white py-16">
+    <div className="relative w-full md:h-screen bg-black text-white py-16">
       <div className="max-w-screen-xl mx-auto px-6 sm:px-12 flex items-center justify-center h-full">
         {/* Carousel Item */}
         <div className="text-center">
@@ -72,10 +72,10 @@ const Homecarousel = () => {
       </div>
 
       {/* Carousel Controls */}
-      <div className="absolute z-30 flex justify-between top-1/2 w-full px-4 py-16">
+      <div className="absolute z-30 flex justify-between top-1/2 w-full px-4 py-16 ">
         <button
           type="button"
-          className="text-white bg-black/50 p-3 rounded-full focus:outline-none hover:bg-black/70"
+          className="text-white bg-black/50 p-3 rounded-full focus:outline-none hover:bg-black/70 lg:block hidden"
           onClick={prevSlide}
         >
           <svg
@@ -96,7 +96,7 @@ const Homecarousel = () => {
 
         <button
           type="button"
-          className="text-white bg-black/50 p-3 rounded-full focus:outline-none hover:bg-black/70"
+          className="text-white bg-black/50 p-3 rounded-full focus:outline-none hover:bg-black/70 lg:block hidden"
           onClick={nextSlide}
         >
           <svg
@@ -117,7 +117,7 @@ const Homecarousel = () => {
       </div>
 
       {/* Slider indicators */}
-      <div className="absolute z-30 bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 py-16">
+      <div className="absolute z-30 bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3 py-2 md:py-16">
         {testimonials.map((_, index) => (
           <button
             key={index}

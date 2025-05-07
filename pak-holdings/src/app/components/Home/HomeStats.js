@@ -3,14 +3,14 @@ import Link from "next/link";
 const HomeStats = () => {
   return (
     <div className="py-16 bg-[#0D3B2A]">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-10">
+      <div className="max-w-screen-x mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-16">
         {/* Left Side: Text */}
         <div className="flex flex-col items-start justify-center text-start lg:text-left">
           <p className="font-semibold text-[16px] text-white">Tagline</p>
-          <h2 className="text-[48px] sm:text-[36px] font-normal max-w-sm text-[#fff] mb-4">
+          <h2 className="md:text-[48px] text-[36px] font-normal max-w-sm text-[#fff] mb-4">
             Medium length section heading goes here
           </h2>
-          <p className="text-[18px] sm:text-[16px] text-[#fff] mb-6">
+          <p className="md:text-[18px] text-[16px] text-[#fff] mb-6">
             At Pakholding, we pride ourselves on our significant milestones and
             impactful projects. Our statistics reflect our commitment to
             excellence and innovation in every venture.
@@ -18,13 +18,13 @@ const HomeStats = () => {
           <div className="grid grid-cols-2 gap-8">
             <div>
               <h2 className="text-[48px] text-white font-normal">75%</h2>
-              <p className="text-[16px] font-mormal text-white">
+              <p className="md:text-[16px] text-[14px] font-mormal text-white">
                 Increase in portfolio value over the last year.
               </p>
             </div>
             <div>
               <h2 className="text-[48px] text-white font-normal">30</h2>
-              <p className="text-[16px] font-mormal text-white">
+              <p className="md:text-[16px] text-[14px] font-mormal text-white">
                 Successful projects completed across diverse sectors.
               </p>
             </div>
