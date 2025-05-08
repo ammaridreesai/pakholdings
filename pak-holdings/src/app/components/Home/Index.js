@@ -1,5 +1,5 @@
-import Footer from "../Footer";
-import Header from "../Header";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import Banner from "./Banner";
 import HeroSection from "./HeroSection";
 import Homecarousel from "./Homecarousel";

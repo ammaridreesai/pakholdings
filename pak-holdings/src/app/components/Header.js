@@ -28,13 +28,13 @@ const Navbar = () => {
           <Link href="/" className="text-[16px] leading-[64px]">
             Home Page
           </Link>
-          <Link href="#" className="text-[16px] leading-[64px]">
+          <Link href="/about_us" className="text-[16px] leading-[64px]">
             About Us
           </Link>
           <Link href="#" className="text-[16px] leading-[64px]">
             Our Services
           </Link>
-          <Link href="#" className="text-[16px] leading-[64px]">
+          <Link href="/contact_us" className="text-[16px] leading-[64px]">
             Contact Us
           </Link>
         </div>
@@ -64,13 +64,13 @@ const Navbar = () => {
           <Link href="/" className="block text-[16px] leading-[48px]">
             Home Page
           </Link>
-          <Link href="#" className="block text-[16px] leading-[48px]">
+          <Link href="/about_us" className="block text-[16px] leading-[48px]">
             About Us
           </Link>
           <Link href="#" className="block text-[16px] leading-[48px]">
             Our Services
           </Link>
-          <Link href="#" className="block text-[16px] leading-[48px]">
+          <Link href="/contact_us" className="block text-[16px] leading-[48px]">
             Contact Us
           </Link>
           <Link

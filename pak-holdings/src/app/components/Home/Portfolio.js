@@ -127,7 +127,7 @@ const Portfolio = () => {
       {/* View all Button */}
       <div className="flex justify-center lg:justify-center space-x-4 ">
         <Link
-          href="#"
+          href="/portfolio"
           className="flex items-center justify-center w-[100px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#252424] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
         >
           View All

@@ -11,9 +11,9 @@ const Footer = () => {
         {/* <!--Grid--> */}
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-8 py-10 max-sm:max-w-sm max-sm:mx-auto gap-y-8">
           <div className="col-span-full mb-10 lg:col-span-3 lg:mb-0">
-            <div className="">
+            <div className="w-[100px]">
               <Link href="/">
-                <Image className="" src={logo} alt="logo" />
+                <Image className="w-[100px]" src={logo} alt="logo" />
               </Link>
             </div>
             <p className="py-8 text-sm  lg:max-w-sm text-start lg:text-left">
