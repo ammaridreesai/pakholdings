@@ -78,9 +78,14 @@ const Portfolio = () => {
               key={index}
               className="rounded overflow-hidden shadow-lg flex flex-col"
             >
-              <div className="relative">
+              <div className="relative h-full overflow-hidden">
                 <a href={card.link}>
-                  <Image className="w-full" src={card.image} alt={card.title} />
+                  <Image
+                    className="w-full h-full object-cover"
+                    src={card.image}
+                    alt={card.title}
+                    placeholder="blur"
+                  />
                 </a>
               </div>
               <div className="px-2 py-4 mb-auto">

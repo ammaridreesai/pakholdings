@@ -31,7 +31,7 @@ const Navbar = () => {
           <Link href="/about_us" className="text-[16px] leading-[64px]">
             About Us
           </Link>
-          <Link href="#" className="text-[16px] leading-[64px]">
+          <Link href="/portfolio" className="text-[16px] leading-[64px]">
             Our Services
           </Link>
           <Link href="/contact_us" className="text-[16px] leading-[64px]">
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="hidden lg:block mr-[64px]">
         <Link
           className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
-          href="#"
+          href="/contact_us"
         >
           Contact
         </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
           <Link href="/about_us" className="block text-[16px] leading-[48px]">
             About Us
           </Link>
-          <Link href="#" className="block text-[16px] leading-[48px]">
+          <Link href="/portfolio" className="block text-[16px] leading-[48px]">
             Our Services
           </Link>
           <Link href="/contact_us" className="block text-[16px] leading-[48px]">
@@ -75,7 +75,7 @@ const Navbar = () => {
           </Link>
           <Link
             className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
-            href="#"
+            href="/contact_us"
           >
             Contact
           </Link>

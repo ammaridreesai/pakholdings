@@ -8,133 +8,136 @@ import portfolioImage5 from "../../../../public/Images/portfolioImage5.png";
 import portfolioImage6 from "../../../../public/Images/portfolioImage6.png";
 
 const Portfolio = () => {
-    const cards = [
-        {
-            image: portfolioImage5,
-            title: "Urban Retail Hub",
-            description:
-                "A vibrant shopping destination in the heart of the city.",
-            tags: ["Retail Space", "Shopping Center", "Urban Development"],
-            link: "#",
-        },
-        {
-            image: portfolioImage6,
-            title: "Luxury Living Spaces",
-            description:
-                "Exclusive apartments designed for modern lifestyles.",
-            tags: ["Real Estate", "Luxury Homes", "Modern Design"],
-            link: "#",
-        },
-        {
-            image: portfolioImage5,
-            title: "Lifestyle Experience",
-            description:
-                "A unique venue blending culture, dining, and entertainment.",
-            tags: ["Lifestyle Venue", "Cultural Hub", "Dining Options"],
-            link: "#",
-        },
-        {
-            image: portfolioImage6,
-            title: "Community Park",
-            description:
-                "A green space designed for relaxation and community events.",
-            tags: ["Public Space", "Community Focused", "Outdoor Activities"],
-            link: "#",
-        },
-        {
-            image: portfolioImage5,
-            title: "Project name here",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            tags: ["Tag one", "Tag two", "Tag three"],
-            link: "#",
-        },
-        {
-            image: portfolioImage6,
-            title: "Project name here",
-            description:
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            tags: ["Tag one", "Tag two", "Tag three"],
-            link: "#",
-        },
-    ];
+  const cards = [
+    {
+      image: portfolioImage5,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      link: "#",
+    },
+    {
+      image: portfolioImage6,
+      title: "Luxury Living Spaces",
+      description: "Exclusive apartments designed for modern lifestyles.",
+      tags: ["Real Estate", "Luxury Homes", "Modern Design"],
+      link: "#",
+    },
+    {
+      image: portfolioImage5,
+      title: "Lifestyle Experience",
+      description:
+        "A unique venue blending culture, dining, and entertainment.",
+      tags: ["Lifestyle Venue", "Cultural Hub", "Dining Options"],
+      link: "#",
+    },
+    {
+      image: portfolioImage6,
+      title: "Community Park",
+      description:
+        "A green space designed for relaxation and community events.",
+      tags: ["Public Space", "Community Focused", "Outdoor Activities"],
+      link: "#",
+    },
+    {
+      image: portfolioImage5,
+      title: "Project name here",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      tags: ["Tag one", "Tag two", "Tag three"],
+      link: "#",
+    },
+    {
+      image: portfolioImage6,
+      title: "Project name here",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      tags: ["Tag one", "Tag two", "Tag three"],
+      link: "#",
+    },
+  ];
 
-    return (
-        <div className="bg-white text-black py-16">
-            <div className="text-center mb-16">
-                <p className="mb-2 text-base sm:text-lg md:text-xl">Portfolio</p>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
-                    Explore Our Projects
-                </h2>
-                <p className="text-[16px]">
-                    Discover our diverse portfolio of ventures.
-                </p>
-            </div>
+  return (
+    <div className="bg-white text-black py-16">
+      <div className="text-center mb-16">
+        <p className="mb-2 text-base sm:text-lg md:text-xl">Portfolio</p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
+          Explore Our Projects
+        </h2>
+        <p className="text-[16px]">
+          Discover our diverse portfolio of ventures.
+        </p>
+      </div>
 
-            <div className="max-w-screen-2xl mx-auto p-5 sm:p-10 md:p-16">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
-                    {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className="rounded overflow-hidden shadow-lg flex flex-col"
-                        >
-                            <div className="relative">
-                                <a href={card.link}>
-                                    <Image className="w-full" src={card.image} alt={card.title} />
-                                </a>
-                            </div>
-                            <div className="px-2 py-4 mb-auto">
-                                <a
-                                    href={card.link}
-                                    className="font-medium text-lg inline-block  transition duration-500 ease-in-out inline-block mb-2"
-                                >
-                                    {card.title}
-                                </a>
-                                <p className="text-gray-500 text-sm">{card.description}</p>
-                                <div className="flex flex-wrap gap-2 my-4">
-                                    {card.tags.map((tag, index) => (
-                                        <span
-                                            key={index}
-                                            className="text-xs bg-transparent border border-gray-400 rounded-[8px] text-black px-3 py-1 cursor-pointer transition duration-300"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-                                <Link href={card.link} className="flex items-center">
-                                    View Project
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        className="ml-2 h-4 w-4"
-                                    >
-                                        <path
-                                            d="M5 12h14M12 5l7 7-7 7"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            {/* View all Button */}
-            <div className="flex justify-center lg:justify-center space-x-4 ">
-                <Link
-                    href="#"
-                    className="flex items-center justify-center w-[100px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#252424] bg-transparent text-black font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
+      <div className="max-w-screen-2xl mx-auto p-5 sm:p-10 md:p-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="rounded overflow-hidden shadow-lg flex flex-col"
+            >
+              <div className="relative h-full overflow-hidden">
+                <a href={card.link}>
+                  <Image
+                    className="w-full h-full object-cover"
+                    src={card.image}
+                    alt={card.title}
+                    placeholder="blur"
+                  />
+                </a>
+              </div>
+              <div className="px-2 py-4 mb-auto">
+                <a
+                  href={card.link}
+                  className="font-medium text-lg inline-block  transition duration-500 ease-in-out inline-block mb-2"
                 >
-                    View All
+                  {card.title}
+                </a>
+                <p className="text-gray-500 text-sm">{card.description}</p>
+                <div className="flex flex-wrap gap-2 my-4">
+                  {card.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-xs bg-transparent border border-gray-400 rounded-[8px] text-black px-3 py-1 cursor-pointer transition duration-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link href={card.link} className="flex items-center">
+                  View Project
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    className="ml-2 h-4 w-4"
+                  >
+                    <path
+                      d="M5 12h14M12 5l7 7-7 7"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </Link>
+              </div>
             </div>
+          ))}
         </div>
-    );
+      </div>
+
+      {/* View all Button */}
+      <div className="flex justify-center lg:justify-center space-x-4 ">
+        <Link
+          href="#"
+          className="flex items-center justify-center w-[100px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#252424] bg-transparent text-black font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
+        >
+          View All
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Portfolio;
