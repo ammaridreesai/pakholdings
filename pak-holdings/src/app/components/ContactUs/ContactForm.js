@@ -95,7 +95,7 @@ export default function ContactForm() {
     <div className="bg-black text-white py-16">
       <div className="max-w-screen-md mx-auto px-6 sm:px-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">Get in Touch</h2>
-        <p className="text-center text-lg font-normal mb-10">We'd love to hear from you!</p>
+        <p className="text-center text-lg font-normal mb-10">We&apos;d love to hear from you!</p>
 
         <form className="space-y-8" onSubmit={handleSubmit}>
           {/* Form Fields */}

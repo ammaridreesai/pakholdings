@@ -1,5 +1,6 @@
-"use client"; // Add this line to mark the file as a client component
+"use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Homecarousel = () => {
@@ -57,9 +58,11 @@ const Homecarousel = () => {
           </p>
 
           <div className="flex flex-col justify-center items-center space-y-8 mt-8">
-            <img
+            <Image
               src={testimonials[currentIndex].image}
               alt="Profile"
+              width={50} // You can adjust the size
+              height={50} // You can adjust the size
               className="w-12 h-12 rounded-full object-cover"
             />
             <div className="text-center">
@@ -122,9 +125,8 @@ const Homecarousel = () => {
         {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-white" : "bg-gray-500"
-            }`}
+            className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-white" : "bg-gray-500"
+              }`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Slide ${index + 1}`}
           ></button>

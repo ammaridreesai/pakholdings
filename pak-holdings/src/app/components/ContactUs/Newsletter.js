@@ -1,6 +1,8 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
+import image from "/Images/Contact_us_image_newsletter.png"
 
 export default function Newsletter() {
     return (
@@ -39,8 +41,8 @@ export default function Newsletter() {
                 {/* Image Section */}
                 <div>
                     <div className="bg-gray-300 w-full h-full rounded-lg">
-                        <img
-                            src="/Images/Contact_us_image_newsletter.png"
+                        <Image
+                            src={image}
                             alt="Image Description"
                             className="w-full h-full object-cover rounded-lg"
                         />

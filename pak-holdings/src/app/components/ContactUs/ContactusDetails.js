@@ -7,7 +7,7 @@ export default function ContactusDetails() {
                 <div className="text-center py-12 px-4">
                     <p className="text-[16px] font-semibold leading-[24px] mb-[16px]">Get In Touch</p>
                     <h2 className="mt-4 text-black text-[48px] font-normal leading-[24px]">Contact Us</h2>
-                    <p className="mt-[24px] text-black text-[18px] font-normal leading-[24px]">We'd love to hear from you</p>
+                    <p className="mt-[24px] text-black text-[18px] font-normal leading-[24px]">We&apos;d love to hear from you</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-[80px]">
                         <div className="p-4">
                             <h3 className="text-[32px] font-normal leading-[20px]">Email</h3>
