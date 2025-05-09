@@ -13,7 +13,7 @@ export default function ContactusDetails() {
                             <h3 className="text-[32px] font-normal leading-[20px]">Email</h3>
                             <p className="mt-[16px] text-[16px] leading-[20px] font-normal">Reach out to us via email for inquiries or support.</p>
                             <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
-                                <a href="mailto:hello@relume.io" className="text-blue-600">
+                                <a href="mailto:hello@relume.io" className="">
                                     hello@relume.io
                                 </a>
                             </p>
@@ -22,7 +22,7 @@ export default function ContactusDetails() {
                             <h3 className="text-[32px] font-normal leading-[20px]">Phone</h3>
                             <p className="mt-[16px] text-[16px] leading-[20px] font-normal">Call us for immediate assistance or questions.</p>
                             <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
-                                <a href="tel:+15551234567" className="text-blue-600">
+                                <a href="tel:+15551234567" className="">
                                     +1 (555) 123-4567
                                 </a>
                             </p>
