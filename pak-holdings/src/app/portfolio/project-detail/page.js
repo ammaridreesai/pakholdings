@@ -1,12 +1,16 @@
-import { useRouter } from "next/router";
-import PortfolioDetailPage from "../../components/Portfolio/PortfolioDetail";
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import PortfolioDetails from "../../components/Portfolio/PortfolioDetail";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 const PortfolioDetail = () => {
-  const router = useRouter();
-  const { id } = router.query;
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
 
-  console.log("Router object:", router); 
-  console.log("Router ID:", id); 
+  console.log("Search Params:", searchParams);
+  console.log("Project ID:", id);
 
   const portfolioItems = {
     "urban-retail-hub": {
@@ -30,17 +34,19 @@ const PortfolioDetail = () => {
 
   const portfolioData = portfolioItems[id];
 
-  
-
   console.log("Portfolio Data:", portfolioData);
 
   return (
-    <PortfolioDetailPage
-      title={portfolioData.title}
-      description={portfolioData.description}
-      image={portfolioData.image}
-      tags={portfolioData.tags}
-    />
+    <>
+      <Header />
+      <PortfolioDetails
+        title={portfolioData.title}
+        description={portfolioData.description}
+        image={portfolioData.image}
+        tags={portfolioData.tags}
+      />
+      <Footer />
+    </>
   );
 };
 

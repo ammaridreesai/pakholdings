@@ -1,5 +1,3 @@
-
-
 "use client";
 import { useState } from "react";
 import Image from "next/image";
@@ -50,7 +48,8 @@ const Portfolio = () => {
           Our Work
         </h2>
         <p className="text-[16px]">
-          Discover our standout projects across various industries, showcasing our expertise in transforming visions into impactful realities.
+          Discover our standout projects across various industries, showcasing
+          our expertise in transforming visions into impactful realities.
         </p>
       </div>
 
@@ -81,7 +80,10 @@ const Portfolio = () => {
                 className="rounded overflow-hidden shadow-lg flex flex-col"
               >
                 <div className="relative h-full overflow-hidden">
-                  <Link href={`/portfolio/${card.id}`} passHref>
+                  <Link
+                    href={`/portfolio/project-detail/?id=${card.id}`}
+                    passHref
+                  >
                     <Image
                       className="w-full h-full object-cover"
                       src={card.image}
@@ -94,7 +96,7 @@ const Portfolio = () => {
                 </div>
                 <div className="px-2 py-4 mb-auto">
                   <Link
-                    href={`/portfolio/${card.id}`}
+                    href={`/portfolio/project-detail/?id=${card.id}`}
                     className="font-medium text-lg inline-block mb-2"
                   >
                     {card.title}
