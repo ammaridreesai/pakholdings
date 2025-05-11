@@ -35,8 +35,10 @@ const Portfolio = () => {
     {
       image: car1,
       title: "Lexus LX600h",
-      short_description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
-      description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
+      short_description:
+        "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
+      description:
+        "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
       tags: ["Real Estate", "Luxury Homes", "Modern Design"],
       category: "Imported Cars",
       id: "Lexus-LX600h",
@@ -44,8 +46,10 @@ const Portfolio = () => {
     {
       image: car2,
       title: "Rolls Royce Cullinan Black Badge MANSORY Edition",
-      short_description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
-      description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it’s been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
+      short_description:
+        "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
+      description:
+        "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it’s been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
       tags: ["Retail Space", "Shopping Center", "Urban Development"],
       category: "Imported Cars",
       id: "Rolls-Royce-Cullinan-Black-Badge",
@@ -255,7 +259,9 @@ const Portfolio = () => {
                   >
                     {card.title}
                   </Link>
-                  <p className="text-gray-500 text-sm">{card.short_description}</p>
+                  <p className="text-gray-500 text-sm">
+                    {card.short_description}
+                  </p>
                   <div className="flex flex-wrap gap-2 my-4">
                     {card.tags.map((tag, index) => (
                       <span

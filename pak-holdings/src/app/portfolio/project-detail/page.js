@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { Suspense, useState, useEffect } from "react";
 import PortfolioDetails from "../../components/Portfolio/PortfolioDetail";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -24,158 +25,181 @@ import car15 from "../../../../public/Images/cars14.jpg";
 import vila from "../../../../public/Images/vila.jpg";
 import vila1 from "../../../../public/Images/vila1.jpg";
 
-const PortfolioDetail = () => {
+// Portfolio items data
+const portfolioItems = {
+  "Lexus-LX600h": {
+    image: car1,
+    title: "Lexus LX600h",
+    short_description:
+      "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
+    description:
+      "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
+    tags: ["Real Estate", "Luxury Homes", "Modern Design"],
+    category: "Imported Cars",
+  },
+  "Rolls-Royce-Cullinan-Black-Badge": {
+    image: car2,
+    title: "Rolls Royce Cullinan Black Badge MANSORY Edition",
+    short_description:
+      "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
+    description:
+      "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it's been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  // Grouped Urban Retail Hub items with unique keys
+  "urban-retail-hub-1": {
+    image: car3,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-2": {
+    image: car4,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-3": {
+    image: car5,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-4": {
+    image: car6,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-5": {
+    image: car7,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-6": {
+    image: car8,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-7": {
+    image: car9,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-8": {
+    image: car10,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-9": {
+    image: car11,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-10": {
+    image: car12,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-11": {
+    image: car13,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-12": {
+    image: car14,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  "urban-retail-hub-13": {
+    image: car15,
+    title: "Urban Retail Hub",
+    description: "A vibrant shopping destination in the heart of the city.",
+    tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    category: "Imported Cars",
+  },
+  // Luxury Home
+  "luxury-home-1": {
+    image: vila,
+    title: "Luxury Home 1",
+    description:
+      "Stunning luxury villa with modern amenities and spacious design.",
+    tags: ["Luxury Home", "Modern Architecture", "Interior Design"],
+    category: "Luxury Home",
+  },
+  "luxury-home-2": {
+    image: vila1,
+    title: "Luxury Home 2",
+    description: "A modern retreat offering comfort and class in every corner.",
+    tags: ["Luxury Home", "Modern Architecture", "Interior Design"],
+    category: "Luxury Home",
+  },
+};
+
+// Client component that uses useSearchParams
+function PortfolioContent() {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
+  const [portfolioData, setPortfolioData] = useState(null);
 
-  console.log("Search Params:", searchParams);
-  console.log("Project ID:", id);
-
-  const portfolioItems = {
-    "Lexus-LX600h": {
-     image: car1,
-      title: "Lexus LX600h",
-      short_description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
-      description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
-      tags: ["Real Estate", "Luxury Homes", "Modern Design"],
-      category: "Imported Cars",
-      id: "luxury-living-spaces",
-    },
-    "Rolls-Royce-Cullinan-Black-Badge": {
-      image: car2,
-      title: "Rolls Royce Cullinan Black Badge MANSORY Edition",
-      short_description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
-      description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it’s been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "luxury-living-spaces": {
-      image: car3,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-      id: "luxury-living-spaces",
-    },
-    "luxury-living-spaces": {
-      image: car4,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "luxury-living-spaces": {
-      image: car5,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "luxury-living-spaces": {
-      image: car6,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car7,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car8,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car9,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car10,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car11,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car12,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car13,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car14,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    "urban-retail-hub": {
-      image: car15,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Imported Cars",
-    },
-    // Luxury Home
-    "urban-retail-hub": {
-      image: vila,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Luxury Home",
-    },
-    "urban-retail-hub": {
-      image: vila1,
-      title: "Urban Retail Hub",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Luxury Home",
-    },
-  };
+  useEffect(() => {
+    if (id && portfolioItems[id]) {
+      setPortfolioData(portfolioItems[id]);
+    }
+  }, [id]);
 
   if (!id) {
-    console.log("ID is undefined, likely due to SSR or initial render");
-    return <p>Loading...</p>;
+    return <p>No project ID specified</p>;
   }
 
-  const portfolioData = portfolioItems[id];
+  if (!portfolioData) {
+    return <p>Loading project details...</p>;
+  }
 
-  console.log("Portfolio Data:", portfolioData);
+  return (
+    <PortfolioDetails
+      title={portfolioData.title}
+      description={portfolioData.description}
+      image={portfolioData.image}
+      tags={portfolioData.tags}
+    />
+  );
+}
 
+// Loading fallback component
+function LoadingFallback() {
+  return <div className="p-4 text-center">Loading project details...</div>;
+}
+
+// Main page component
+const PortfolioDetail = () => {
   return (
     <>
       <Header />
-      <PortfolioDetails
-        title={portfolioData?.title}
-        description={portfolioData?.description}
-        image={portfolioData?.image}
-        tags={portfolioData?.tags}
-      />
+      <Suspense fallback={<LoadingFallback />}>
+        <PortfolioContent />
+      </Suspense>
       <Footer />
     </>
   );
