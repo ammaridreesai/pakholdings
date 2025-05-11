@@ -2,31 +2,185 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import portfolioImage5 from "../../../../public/Images/portfolioImage5.png";
-import portfolioImage6 from "../../../../public/Images/portfolioImage6.png";
+// import cars from "../../../../public/Images/cars.png";
+import car1 from "../../../../public/Images/cars1.jpg";
+import car2 from "../../../../public/Images/cars2.jpg";
+import car3 from "../../../../public/Images/cars3.jpg";
+import car4 from "../../../../public/Images/cars4.jpg";
+import car5 from "../../../../public/Images/cars5.jpg";
+import car6 from "../../../../public/Images/cars6.jpg";
+import car7 from "../../../../public/Images/cars7.jpg";
+import car8 from "../../../../public/Images/cars8.jpg";
+import car9 from "../../../../public/Images/cars9.jpg";
+import car10 from "../../../../public/Images/cars10.jpg";
+import car11 from "../../../../public/Images/cars11.jpg";
+import car12 from "../../../../public/Images/cars12.jpg";
+import car13 from "../../../../public/Images/cars13.jpg";
+import car14 from "../../../../public/Images/cars14.jpg";
+import car15 from "../../../../public/Images/cars14.jpg";
+// Luxury Home
+import vila from "../../../../public/Images/vila.jpg";
+import vila1 from "../../../../public/Images/vila1.jpg";
 
 const Portfolio = () => {
   const cards = [
+    // {
+    //   image: cars,
+    //   title: "Urban Retail Hub",
+    //   description: "A vibrant shopping destination in the heart of the city.",
+    //   tags: ["Retail Space", "Shopping Center", "Urban Development"],
+    //   category: "Imported Cars",
+    //   id: "urban-retail-hub",
+    // },
     {
-      image: portfolioImage5,
+      image: car1,
+      title: "Lexus LX600h",
+      short_description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
+      description: "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
+      tags: ["Real Estate", "Luxury Homes", "Modern Design"],
+      category: "Imported Cars",
+      id: "Lexus-LX600h",
+    },
+    {
+      image: car2,
+      title: "Rolls Royce Cullinan Black Badge MANSORY Edition",
+      short_description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
+      description: "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it’s been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "Rolls-Royce-Cullinan-Black-Badge",
+    },
+    {
+      image: car3,
       title: "Urban Retail Hub",
       description: "A vibrant shopping destination in the heart of the city.",
       tags: ["Retail Space", "Shopping Center", "Urban Development"],
-      category: "Commercial",
+      category: "Imported Cars",
       id: "urban-retail-hub",
     },
     {
-      image: portfolioImage6,
-      title: "Luxury Living Spaces",
-      description: "Exclusive apartments designed for modern lifestyles.",
-      tags: ["Real Estate", "Luxury Homes", "Modern Design"],
-      category: "Residential",
-      id: "luxury-living-spaces",
+      image: car4,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
     },
-    // Add more items here
+    {
+      image: car5,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car6,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car7,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car8,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car9,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car10,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car11,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car12,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car13,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car14,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    {
+      image: car15,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Imported Cars",
+      id: "urban-retail-hub",
+    },
+    // Luxury Home
+    {
+      image: vila,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Luxury Home",
+      id: "urban-retail-hub",
+    },
+    {
+      image: vila1,
+      title: "Urban Retail Hub",
+      description: "A vibrant shopping destination in the heart of the city.",
+      tags: ["Retail Space", "Shopping Center", "Urban Development"],
+      category: "Luxury Home",
+      id: "urban-retail-hub",
+    },
   ];
 
-  const categories = ["All", "Commercial", "Residential"];
+  const categories = [
+    "All",
+    "Roma Coffee Shop",
+    "Stallion Mining Industry",
+    "Luxury Home",
+    "Imported Cars",
+    "Stallion Mart",
+  ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -54,11 +208,11 @@ const Portfolio = () => {
       </div>
 
       {/* Tabs Section */}
-      <div className="flex justify-center mb-8 space-x-4">
+      <div className="flex flex-wrap justify-center mb-8 gap-4">
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+            className={`px-2 py-2 rounded-lg text-sm font-medium ${
               selectedCategory === category
                 ? "bg-black text-white"
                 : "bg-gray-200 text-gray-600"
@@ -101,7 +255,7 @@ const Portfolio = () => {
                   >
                     {card.title}
                   </Link>
-                  <p className="text-gray-500 text-sm">{card.description}</p>
+                  <p className="text-gray-500 text-sm">{card.short_description}</p>
                   <div className="flex flex-wrap gap-2 my-4">
                     {card.tags.map((tag, index) => (
                       <span

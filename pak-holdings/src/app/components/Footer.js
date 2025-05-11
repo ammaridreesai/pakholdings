@@ -66,7 +66,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="javascript:;" className="">
+                <Link href="#" className="">
                   FAQs
                 </Link>
               </li>
@@ -123,27 +123,27 @@ const Footer = () => {
             <h4 className="text-[16px] font-medium mb-7">Connect With Us</h4>
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6 flex items-center">
+                <Link target="_blank" href="#" className="">
                 <Facebook className="mr-3 rounded-full " /> {/* Facebook Icon */}
-                <Link href="#" className="">
                   Facebook
                 </Link>
               </li>
 
               <li className="mb-6 flex items-center">
+                <Link target="_blank" href="https://www.instagram.com/pakholdingpk?igsh=MTZnZ2QzcWkwYjU3Mg==" className="">
                 <Instagram className="mr-3 " /> {/* Instagram Icon */}
-                <Link href="https://www.instagram.com/pakholdingpk?igsh=MTZnZ2QzcWkwYjU3Mg==" className="">
                   Instagram
                 </Link>
               </li>
-              <li className="mb-6 flex items-center">
-                <Twitter className="mr-3 " /> {/* Twitter (X) Icon */}
+              {/* <li className="mb-6 flex items-center">
+                <Twitter className="mr-3 " /> 
                 <Link href="javascript:;" className="">
                   X
                 </Link>
-              </li>
+              </li> */}
               <li className="mb-6 flex items-center">
+                <Link target="_blank" href="https://www.linkedin.com/company/pak-holdings/" className="">
                 <LinkedIn className="mr-3 " /> {/* LinkedIn Icon */}
-                <Link href="https://www.linkedin.com/company/pak-holdings/" className="">
                   LinkedIn
                 </Link>
               </li>
@@ -158,13 +158,13 @@ const Footer = () => {
             </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
               <Link
-                href="javascript:;"
+                href="/privacy_policy"
                 className="text-[14px] flex justify-center items-center "
               >
                 Privacy Policy
               </Link>
               <Link
-                href="javascript:;"
+                href="/terms_and_condition"
                 className="text-[14px] flex justify-center items-center"
               >
                 Terms of Use

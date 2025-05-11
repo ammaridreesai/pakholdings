@@ -4,11 +4,14 @@ import Link from "next/link";
 const PortfolioDetailPage = ({ title, description, image, tags }) => {
   return (
     <div className="container mx-auto px-4 py-8">
+      <Link href="/portfolio" passHref>
+        <button className="mb-4 cursor-pointer">Back to Portfolio</button>
+      </Link>
       <div className="flex flex-wrap">
         <div className="w-full md:w-1/2 px-4 mb-8">
           <Image
             src={image}
-            alt={title}  
+            alt={title}
             className="w-full h-auto rounded-lg shadow-md mb-4"
             width={500}
             height={500}
@@ -19,16 +22,19 @@ const PortfolioDetailPage = ({ title, description, image, tags }) => {
           <p className="text-gray-600 mb-4">{description}</p>
           <div className="flex gap-2 mb-4">
             {tags?.map((tag, index) => (
-              <span key={index} className="text-xs bg-gray-200 rounded-full px-3 py-1">
+              <span
+                key={index}
+                className="text-xs bg-gray-200 rounded-full px-3 py-1"
+              >
                 {tag}
               </span>
             ))}
           </div>
-          <Link href="/portfolio" passHref>
+          {/* <Link href="/portfolio" passHref>
             <button className="bg-blue-600 text-white py-2 px-4 rounded-md">
               Back to Portfolio
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

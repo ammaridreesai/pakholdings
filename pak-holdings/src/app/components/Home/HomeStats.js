@@ -39,7 +39,7 @@ const HomeStats = () => {
 
         {/* Right Side: Video */}
         <div className="relative w-full h-auto">
-          <video className="w-full h-full object-cover rounded-lg" controls>
+          <video autoPlay className="w-full h-full object-contain rounded-lg" controls>
             <source src="/Video/Main_video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
