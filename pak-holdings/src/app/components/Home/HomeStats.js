@@ -6,9 +6,9 @@ const HomeStats = () => {
       <div className="max-w-screen-x mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-16">
         {/* Left Side: Text */}
         <div className="flex flex-col items-start justify-center text-start lg:text-left">
-          <p className="font-semibold text-[16px] text-white">Tagline</p>
-          <h2 className="md:text-[48px] text-[36px] font-normal max-w-sm text-[#fff] mb-4">
-            Medium length section heading goes here
+          <p className="font-semibold text-[16px] text-white">Projects</p>
+          <h2 className="md:text-[48px] text-[36px] font-normal max-w-lg text-[#fff] mb-4">
+            Driving Excellence Through Milestones and Impactful Projects
           </h2>
           <p className="text-[18px] sm:text-[16px] text-[#fff] mb-6">
             At Pak Holdings, we pride ourselves on our significant milestones
@@ -38,9 +38,9 @@ const HomeStats = () => {
         </div>
 
         {/* Right Side: Video */}
-        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+        <div className="relative w-full h-auto">
           <video className="w-full h-full object-cover rounded-lg" controls>
-            <source src="your-video-url.mp4" type="video/mp4" />
+            <source src="/Video/Main_video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

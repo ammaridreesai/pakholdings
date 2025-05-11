@@ -1,13 +1,13 @@
-import PortfolioIndex from "../components/Portfolio/Index";
+// pages/portfolio/index.js
 
+import PortfolioIndex from "../components/Portfolio/Index";
 
 
 
 export default function Portfolio() {
   return (
-   <div>
-
-    <PortfolioIndex/>
-   </div>
+    <div>
+      <PortfolioIndex />
+    </div>
   );
 }

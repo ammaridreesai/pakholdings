@@ -51,27 +51,22 @@ const Footer = () => {
             <h4 className="text-[16px]   font-medium mb-7">Quick Links</h4>
             <ul className="text-sm  transition-all duration-500">
               <li className="mb-6">
-                <Link href="javascript:;" className="  hover: ">
+                <Link href="/about_us" className="">
                   About us
                 </Link>
               </li>
               <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
+                <Link href="/contact_us" className="">
                   Contact us
                 </Link>
               </li>
               <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
+                <Link href="/portfolio" className="">
                   Our Services
                 </Link>
               </li>
-              <li className="mb-6">
-                <Link href="javascript:;" className="   hover: ">
-                  Blog Posts
-                </Link>
-              </li>
               <li>
-                <Link href="javascript:;" className="   hover: ">
+                <Link href="javascript:;" className="">
                   FAQs
                 </Link>
               </li>
@@ -129,14 +124,14 @@ const Footer = () => {
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6 flex items-center">
                 <Facebook className="mr-3 rounded-full " /> {/* Facebook Icon */}
-                <Link href="javascript:;" className="">
+                <Link href="#" className="">
                   Facebook
                 </Link>
               </li>
 
               <li className="mb-6 flex items-center">
                 <Instagram className="mr-3 " /> {/* Instagram Icon */}
-                <Link href="javascript:;" className="">
+                <Link href="https://www.instagram.com/pakholdingpk?igsh=MTZnZ2QzcWkwYjU3Mg==" className="">
                   Instagram
                 </Link>
               </li>
@@ -148,14 +143,8 @@ const Footer = () => {
               </li>
               <li className="mb-6 flex items-center">
                 <LinkedIn className="mr-3 " /> {/* LinkedIn Icon */}
-                <Link href="javascript:;" className="">
+                <Link href="https://www.linkedin.com/company/pak-holdings/" className="">
                   LinkedIn
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <YouTube className="mr-3 " /> {/* YouTube Icon */}
-                <Link href="javascript:;" className="">
-                  YouTube
                 </Link>
               </li>
             </ul>

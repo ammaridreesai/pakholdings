@@ -12,7 +12,7 @@ export default function PortfolioIndex() {
       <Header />
       <HeroSection/>
       <Portfolio/>
-      <Banner/>
+      {/* <Banner/> */}
       <Footer/>
     </div>
   );

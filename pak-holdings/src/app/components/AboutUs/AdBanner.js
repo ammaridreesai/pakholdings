@@ -12,7 +12,7 @@ const AdBanner = () => {
                         Discover Our Unique Approach
                     </h2>
                     <p className="text-[18px] font-normal leading-[24px]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Experience innovative solutions driven by a commitment to quality and excellence.
                     </p>
                 </div>
 
@@ -20,7 +20,7 @@ const AdBanner = () => {
                 <div className="flex justify-end items-start space-x-4">
                     <Link
                         className="flex items-center justify-center w-[130px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0B7950] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
-                        href="/contact_us"
+                        href="#"
                     >
                         Learn More
                     </Link>

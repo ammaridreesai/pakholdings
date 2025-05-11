@@ -20,7 +20,7 @@ export default function HeroSection() {
                     <div className="flex flex-wrap gap-2 my-4">
                         <Link
                             className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
-                            href="#"
+                            href="#contact_us_form"
                         >
                             Contact
                         </Link>

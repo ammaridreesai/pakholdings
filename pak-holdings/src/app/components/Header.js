@@ -34,19 +34,19 @@ const Navbar = () => {
           <Link href="/portfolio" className="text-[16px] leading-[64px]">
             Our Services
           </Link>
-          <Link href="/contact_us" className="text-[16px] leading-[64px]">
+          {/* <Link href="/contact_us" className="text-[16px] leading-[64px]">
             Contact Us
-          </Link>
+          </Link> */}
         </div>
       </div>
 
       {/* Right side: Contact Button (large screens) */}
       <div className="hidden lg:block mr-[64px]">
         <Link
-          className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
+          className="flex items-center justify-center w-[110px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
           href="/contact_us"
         >
-          Contact
+          Contact Us 
         </Link>
       </div>
 
@@ -70,14 +70,14 @@ const Navbar = () => {
           <Link href="/portfolio" className="block text-[16px] leading-[48px]">
             Our Services
           </Link>
-          <Link href="/contact_us" className="block text-[16px] leading-[48px]">
+          {/* <Link href="/contact_us" className="block text-[16px] leading-[48px]">
             Contact Us
-          </Link>
+          </Link> */}
           <Link
             className="flex items-center justify-center w-[96px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
             href="/contact_us"
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       )}

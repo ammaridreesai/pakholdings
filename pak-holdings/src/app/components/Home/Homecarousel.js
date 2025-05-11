@@ -9,24 +9,24 @@ const Homecarousel = () => {
   const testimonials = [
     {
       quote:
-        "Working with Pak Holding has transformed our business approach. Their insights and dedication are unmatched!",
-      name: "John Doe",
-      position: "CEO, Retail Inc.",
-      image: "/path-to-image.jpg", // Replace with the actual image URL
+        "Provide visionary leadership to drive the group’s long-term growth, investment strategies, and stakeholder relations.Oversee all subsidiaries and operations, ensuring alignment with Pak Holdings mission of transparency and investor success.",
+      name: "Raja Sohail Aslam",
+      position: "CEO",
+      image: "/Images/CEO.jpg", // Replace with the actual image URL
     },
     {
       quote:
-        "Pak Holding's team provided the perfect strategy to enhance our operations. We're proud to have them as partners.",
-      name: "Jane Smith",
-      position: "Founder, Tech Solutions",
-      image: "/path-to-image2.jpg", // Replace with the actual image URL
+        "Spearhead business development and market expansion for high-potential ventures under the Stallion Growth brand.Monitor financial and operational KPIs, ensuring scalable and profitable growth for investor-backed projects.",
+      name: "Muhammad Adil Elah",
+      position: "Director Stallion",
+      image: "/Images/Director.jpg", // Replace with the actual image URL
     },
     {
       quote:
-        "Their innovative approach and expertise helped us reach new heights. Highly recommended!",
-      name: "Michael Johnson",
-      position: "COO, Global Ventures",
-      image: "/path-to-image3.jpg", // Replace with the actual image URL
+        "Execute board-level decisions and manage cross-company initiatives to optimize portfolio performance. Lead investor relations and regulatory compliance, fostering trust with overseas Pakistani investors.",
+      name: "Raja Haider Ali",
+      position: "Director Pak Holdings",
+      image: "/Images/Director-Pak-Holdings.jpg", // Replace with the actual image URL
     },
   ];
 
@@ -61,9 +61,9 @@ const Homecarousel = () => {
             <Image
               src={testimonials[currentIndex].image}
               alt="Profile"
-              width={50} // You can adjust the size
-              height={50} // You can adjust the size
-              className="w-12 h-12 rounded-full object-cover"
+              width={100} // You can adjust the size
+              height={100} // You can adjust the size
+              className="w-24 h-24 rounded-full object-cover"
             />
             <div className="text-center">
               <p className="font-semibold">{testimonials[currentIndex].name}</p>

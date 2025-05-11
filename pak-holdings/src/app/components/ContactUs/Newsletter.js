@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import image from "../../../../public/Images/Contact_us_image_newsletter.png";
+import image from "../../../../public/Images/vila1.jpg";
 
 export default function Newsletter() {
   return (

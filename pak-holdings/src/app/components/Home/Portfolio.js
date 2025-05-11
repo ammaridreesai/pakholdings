@@ -60,7 +60,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-16">
+    <div id="portfolio" className="bg-black text-white py-16">
       <div className="text-center mb-16">
         <p className="mb-2 text-base sm:text-lg md:text-xl">Portfolio</p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">

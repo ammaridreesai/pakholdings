@@ -10,10 +10,10 @@ export default function HeroSection() {
                     <div className="w-11/12 sm:w-2/3 lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
                         <h1
                             className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl text-center  font-black leading-10">
-                            Innovative Retail Spaces
+                            Our Diverse Portfolio
                         </h1>
                         <p className="mt-5 sm:mt-10 lg:w-10/12  font-normal text-center text-xl">
-                            Explore our diverse portfolio of retail, real estate, and lifestyle investments that redefine excellence.
+                           Explore our exceptional projects across Retail Development, Real Estate, and Lifestyle Ventures — each crafted with a vision for quality and impact.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-2 my-4">

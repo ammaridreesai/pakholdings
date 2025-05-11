@@ -15,7 +15,7 @@ export default function HomePage() {
       <Header />
       <HeroSection/>
       <Portfolio/>
-      <ValueSection/>
+      {/* <ValueSection/> */}
       <HomeStats/>
       <Homecarousel/>
       <Banner/>
