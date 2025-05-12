@@ -9,7 +9,8 @@ export default function Teams() {
       image: "/Images/CEO.jpg",
       name: "Raja Sohail Aslam",
       position: "CEO",
-      description: "Provide visionary leadership to drive the groups long-term growth, investment strategies, and stakeholder relations. ",
+      description:
+        "Provide visionary leadership to drive the groups long-term growth, investment strategies, and stakeholder relations. ",
       socialLinks: [
         {
           href: "#",
@@ -35,11 +36,11 @@ export default function Teams() {
       ],
     },
     {
-      image:
-        "/Images/Director-Pak-Holdings.jpg",
+      image: "/Images/Director-Pak-Holdings.jpg",
       name: "Raja Haider Ali",
       position: "Director Pak Holdings",
-      description:"Execute board-level decisions and manage cross-company initiatives to optimize portfolio performance. ",
+      description:
+        "Execute board-level decisions and manage cross-company initiatives to optimize portfolio performance. ",
       socialLinks: [
         {
           href: "#",
@@ -65,11 +66,11 @@ export default function Teams() {
       ],
     },
     {
-      image:
-        "/Images/Director.jpg",
+      image: "/Images/Director.jpg",
       name: "Muhammad Adil Elahi",
       position: "Director Stallion Growth",
-      description:"Spearhead business development and market expansion for high-potential ventures under the Stallion Growth brand.",
+      description:
+        "Spearhead business development and market expansion for high-potential ventures under the Stallion Growth brand.",
       socialLinks: [
         {
           href: "#",
@@ -126,7 +127,7 @@ export default function Teams() {
               </h3>
               <p className="text-black">{member.position}</p>
               <p className="text-gray-500">{member.description}</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              {/* <ul className="flex justify-center mt-4 space-x-4">
                 {member.socialLinks.map((link, index) => (
                   <li key={index}>
                     <a
@@ -148,7 +149,7 @@ export default function Teams() {
                     </a>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           ))}
         </div>

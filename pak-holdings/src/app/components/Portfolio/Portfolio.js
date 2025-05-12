@@ -10,8 +10,8 @@ const Portfolio = () => {
     "All",
     "Roma Coffee Shop",
     "Stallion Mining Industry",
-    "Luxury Home",
-    "Imported Cars",
+    "Stallion Luxury Home & Land",
+    "Stallion Motors",
     "Stallion Mart",
   ];
 

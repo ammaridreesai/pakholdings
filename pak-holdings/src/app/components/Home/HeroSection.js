@@ -18,11 +18,10 @@ const HeroSection = () => {
           <div className="mx-auto flex flex-col items-center py-12 sm:py-24">
             <div className="lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
               <h1 className=" text-[48px] md:text-[56px] text-center font-normal leading-10">
-              Welcome to Pak holdings
+                Welcome to Pak holdings
               </h1>
               <p className="mt-[24px] sm:mt-10 font-normal text-center text-[18px] leading-[24px]">
-              “We Design, Create & Run Your Business”
-
+                “We Design, Create & Run Your Business”
               </p>
             </div>
           </div>
@@ -59,7 +58,7 @@ const HeroSection = () => {
 
                 {/* Learn More Button */}
                 <Link
-                  href="#"
+                  href="/about_us"
                   className="flex items-center justify-center md:w-[177px] w-[130px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
                 >
                   Learn More

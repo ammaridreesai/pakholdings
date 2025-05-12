@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
@@ -37,9 +37,11 @@ export default function ContactForm() {
     if (!formData.firstName) newErrors.firstName = "First Name is required";
     if (!formData.lastName) newErrors.lastName = "Last Name is required";
     if (!formData.email) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Please enter a valid email";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Please enter a valid email";
     if (!formData.phone) newErrors.phone = "Phone number is required";
-    else if (!/\d{4}-\d{7}/.test(formData.phone)) newErrors.phone = "Phone number format should be XXXX-XXXXXXX";
+    else if (!/\d{4}-\d{7}/.test(formData.phone))
+      newErrors.phone = "Phone number format should be XXXX-XXXXXXX";
     if (!formData.message) newErrors.message = "Message is required";
     return newErrors;
   };
@@ -94,93 +96,147 @@ export default function ContactForm() {
   return (
     <div id="contact_us_form" className="bg-black text-white py-16">
       <div className="max-w-screen-md mx-auto px-6 sm:px-12">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">Get in Touch</h2>
-        <p className="text-center text-lg font-normal mb-10">We&apos;d love to hear from you!</p>
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+          Get in Touch
+        </h2>
+        <p className="text-center text-lg font-normal mb-10">
+          We&apos;d love to hear from you!
+        </p>
 
-        <form  className="space-y-8" onSubmit={handleSubmit}>
+        <form className="space-y-8" onSubmit={handleSubmit}>
           {/* Form Fields */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <label htmlFor="first-name" className="block text-sm font-medium">First Name</label>
+              <label htmlFor="first-name" className="block text-sm font-medium">
+                First Name
+              </label>
               <input
                 type="text"
                 id="first-name"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className={`w-full p-3 border ${errors.firstName ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+                className={`w-full p-3 border ${
+                  errors.firstName ? "border-red-500" : "border-gray-300"
+                } rounded-lg transition outline-none`}
               />
-              {errors.firstName && <p className="text-red-500 text-xs">{errors.firstName}</p>}
+              {errors.firstName && (
+                <p className="text-red-500 text-xs">{errors.firstName}</p>
+              )}
             </div>
             <div className="space-y-2">
-              <label htmlFor="last-name" className="block text-sm font-medium">Last Name</label>
+              <label htmlFor="last-name" className="block text-sm font-medium">
+                Last Name
+              </label>
               <input
                 type="text"
                 id="last-name"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className={`w-full p-3 border ${errors.lastName ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+                className={`w-full p-3 border ${
+                  errors.lastName ? "border-red-500" : "border-gray-300"
+                } rounded-lg transition outline-none`}
               />
-              {errors.lastName && <p className="text-red-500 text-xs">{errors.lastName}</p>}
+              {errors.lastName && (
+                <p className="text-red-500 text-xs">{errors.lastName}</p>
+              )}
             </div>
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium">
+              Email
+            </label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className={`w-full p-3 border ${errors.email ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+              className={`w-full p-3 border ${
+                errors.email ? "border-red-500" : "border-gray-300"
+              } rounded-lg transition outline-none`}
             />
-            {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-xs">{errors.email}</p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="phone" className="block text-sm font-medium">Phone Number</label>
+            <label htmlFor="phone" className="block text-sm font-medium">
+              Phone Number
+            </label>
             <input
               type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handlePhoneChange}
-              className={`w-full p-3 border ${errors.phone ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+              className={`w-full p-3 border ${
+                errors.phone ? "border-red-500" : "border-gray-300"
+              } rounded-lg transition outline-none`}
             />
-            {errors.phone && <p className="text-red-500 text-xs">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-xs">{errors.phone}</p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="topic" className="block text-sm font-medium">Select a Topic</label>
+            <label htmlFor="topic" className="block text-sm font-medium">
+              Select a Topic
+            </label>
             <select
               id="topic"
               name="topic"
               value={formData.topic}
               onChange={handleInputChange}
-              className={`w-full p-3 border ${errors.topic ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+              className={`w-full p-3 border ${
+                errors.topic ? "border-red-500" : "border-gray-300"
+              } rounded-lg transition outline-none`}
             >
-              <option value="" className="bg-black text-white">Select one...</option>
-              <option value="Retail Development" className="bg-black text-white">Retail Development</option>
-              <option value="Real Estate" className="bg-black text-white">Real Estate</option>
-              <option value="Lifestyle Ventures" className="bg-black text-white">Lifestyle Ventures</option>
+              <option value="" className="bg-black text-white">
+                Select one...
+              </option>
+              <option
+                value="Retail Development"
+                className="bg-black text-white"
+              >
+                Retail Development
+              </option>
+              <option value="Real Estate" className="bg-black text-white">
+                Real Estate
+              </option>
+              <option
+                value="Lifestyle Ventures"
+                className="bg-black text-white"
+              >
+                Lifestyle Ventures
+              </option>
             </select>
-            {errors.topic && <p className="text-red-500 text-xs">{errors.topic}</p>}
+            {errors.topic && (
+              <p className="text-red-500 text-xs">{errors.topic}</p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="message" className="block text-sm font-medium">Message</label>
+            <label htmlFor="message" className="block text-sm font-medium">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"
               rows="6"
               value={formData.message}
               onChange={handleInputChange}
-              className={`w-full p-3 border ${errors.message ? "border-red-500" : "border-gray-300"} rounded-lg transition outline-none`}
+              className={`w-full p-3 border ${
+                errors.message ? "border-red-500" : "border-gray-300"
+              } rounded-lg transition outline-none`}
               placeholder="Type your message..."
             ></textarea>
-            {errors.message && <p className="text-red-500 text-xs">{errors.message}</p>}
+            {errors.message && (
+              <p className="text-red-500 text-xs">{errors.message}</p>
+            )}
           </div>
 
           <div className="flex items-center space-x-2">
@@ -192,13 +248,15 @@ export default function ContactForm() {
               onChange={handleInputChange}
               className="h-4 w-4 text-green-500"
             />
-            <label htmlFor="terms" className="text-sm font-medium">I agree to the Terms</label>
+            <label htmlFor="terms" className="text-sm font-medium">
+              I agree to the Terms
+            </label>
           </div>
 
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-green-500 text-white py-3 px-8 rounded-lg shadow-md hover:bg-green-600 transition duration-300"
+              className="bg-green-500 text-white py-3 px-8 rounded-lg shadow-md hover:bg-green-600 transition duration-300 cursor-pointer"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Submit"}

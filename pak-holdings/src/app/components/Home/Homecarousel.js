@@ -18,7 +18,7 @@ const Homecarousel = () => {
       quote:
         "Spearhead business development and market expansion for high-potential ventures under the Stallion Growth brand.Monitor financial and operational KPIs, ensuring scalable and profitable growth for investor-backed projects.",
       name: "Muhammad Adil Elah",
-      position: "Director Stallion",
+      position: "Director of Stallion Growth",
       image: "/Images/Director.jpg", // Replace with the actual image URL
     },
     {
@@ -63,7 +63,7 @@ const Homecarousel = () => {
               alt="Profile"
               width={100} // You can adjust the size
               height={100} // You can adjust the size
-              className="w-24 h-24 rounded-full object-cover"
+              className="w-60 h-60 rounded-full object-cover"
             />
             <div className="text-center">
               <p className="font-semibold">{testimonials[currentIndex].name}</p>
@@ -125,8 +125,9 @@ const Homecarousel = () => {
         {testimonials.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full ${currentIndex === index ? "bg-white" : "bg-gray-500"
-              }`}
+            className={`w-3 h-3 rounded-full ${
+              currentIndex === index ? "bg-white" : "bg-gray-500"
+            }`}
             onClick={() => setCurrentIndex(index)}
             aria-label={`Slide ${index + 1}`}
           ></button>

@@ -19,7 +19,12 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
           {projects
             .filter(
-              (card) => card.id === "Lexus-LX600h-2" || card.id === "villa-1"
+              (card) =>
+                card.id === "Rolls-Royce-Cullinan-Black-Badge-1" ||
+                card.id === "villa-2" ||
+                card.id === "Roma-Coffee-Shop" ||
+                card.id === "Himalayan-pink-salt" ||
+                card.id === "Stallion Mart"
             )
             .map((card, index) => (
               <div

@@ -7,19 +7,17 @@ import HomeStats from "./HomeStats";
 import Portfolio from "./Portfolio";
 import ValueSection from "./ValueSection";
 
-
-
 export default function HomePage() {
   return (
     <div>
       <Header />
-      <HeroSection/>
-      <Portfolio/>
-      {/* <ValueSection/> */}
-      <HomeStats/>
-      <Homecarousel/>
-      <Banner/>
-      <Footer/>
+      <HeroSection />
+      <Portfolio />
+      <ValueSection />
+      <HomeStats />
+      <Homecarousel />
+      <Banner />
+      <Footer />
     </div>
   );
 }
