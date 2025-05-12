@@ -6,7 +6,7 @@ import "@fontsource/albert-sans";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
-import logo from "../../../public/Images/company-logo.svg";
+import CompanyLogo from "../../../public/Images/logo-1-removebg-preview.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,13 @@ const Navbar = () => {
       <div className="flex items-center">
         <div className="lg:px-16">
           <Link href="/">
-            <Image className="" src={logo} alt="logo" />
+            <Image
+              className="company-logo"
+              src={CompanyLogo}
+              alt="logo"
+              height={70}
+              width={80}
+            />
           </Link>
         </div>
 
@@ -46,7 +52,7 @@ const Navbar = () => {
           className="flex items-center justify-center w-[110px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#0D9161] bg-[#11B67A] text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
           href="/contact_us"
         >
-          Contact Us 
+          Contact Us
         </Link>
       </div>
 

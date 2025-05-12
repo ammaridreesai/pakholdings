@@ -1,9 +1,15 @@
 "use client"; // Add this line to mark the file as Link client component
 
 import Link from "next/link";
-import logo from "../../../public/Images/company-logo.svg";
+import CompanyLogo from "../../../public/Images/logo-1-removebg-preview.png";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, LinkedIn, YouTube } from '@mui/icons-material';
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  LinkedIn,
+  YouTube,
+} from "@mui/icons-material";
 const Footer = () => {
   return (
     <footer className="w-full bg-black text-white">
@@ -13,7 +19,13 @@ const Footer = () => {
           <div className="col-span-full mb-10 lg:col-span-3 lg:mb-0">
             <div className="w-[100px]">
               <Link href="/">
-                <Image className="w-[100px]" src={logo} alt="logo" />
+                <Image
+                  className="company-logo"
+                  src={CompanyLogo}
+                  alt="logo"
+                  height={70}
+                  width={80}
+                />
               </Link>
             </div>
             <p className="py-8 text-sm  lg:max-w-sm text-start lg:text-left">
@@ -124,14 +136,19 @@ const Footer = () => {
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6 flex items-center">
                 <Link target="_blank" href="#" className="">
-                <Facebook className="mr-3 rounded-full " /> {/* Facebook Icon */}
+                  <Facebook className="mr-3 rounded-full " />{" "}
+                  {/* Facebook Icon */}
                   Facebook
                 </Link>
               </li>
 
               <li className="mb-6 flex items-center">
-                <Link target="_blank" href="https://www.instagram.com/pakholdingpk?igsh=MTZnZ2QzcWkwYjU3Mg==" className="">
-                <Instagram className="mr-3 " /> {/* Instagram Icon */}
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/pakholdingpk?igsh=MTZnZ2QzcWkwYjU3Mg=="
+                  className=""
+                >
+                  <Instagram className="mr-3 " /> {/* Instagram Icon */}
                   Instagram
                 </Link>
               </li>
@@ -142,8 +159,12 @@ const Footer = () => {
                 </Link>
               </li> */}
               <li className="mb-6 flex items-center">
-                <Link target="_blank" href="https://www.linkedin.com/company/pak-holdings/" className="">
-                <LinkedIn className="mr-3 " /> {/* LinkedIn Icon */}
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/company/pak-holdings/"
+                  className=""
+                >
+                  <LinkedIn className="mr-3 " /> {/* LinkedIn Icon */}
                   LinkedIn
                 </Link>
               </li>
@@ -184,5 +205,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-
