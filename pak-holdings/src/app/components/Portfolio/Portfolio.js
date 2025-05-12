@@ -2,172 +2,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import cars from "../../../../public/Images/cars.png";
-import car1 from "../../../../public/Images/cars1.jpg";
-import car2 from "../../../../public/Images/cars2.jpg";
-import car3 from "../../../../public/Images/cars3.jpg";
-import car4 from "../../../../public/Images/cars4.jpg";
-import car5 from "../../../../public/Images/cars5.jpg";
-import car6 from "../../../../public/Images/cars6.jpg";
-import car7 from "../../../../public/Images/cars7.jpg";
-import car8 from "../../../../public/Images/cars8.jpg";
-import car9 from "../../../../public/Images/cars9.jpg";
-import car10 from "../../../../public/Images/cars10.jpg";
-import car11 from "../../../../public/Images/cars11.jpg";
-import car12 from "../../../../public/Images/cars12.jpg";
-import car13 from "../../../../public/Images/cars13.jpg";
-import car14 from "../../../../public/Images/cars14.jpg";
-import car15 from "../../../../public/Images/cars14.jpg";
-// Luxury Home
-import vila from "../../../../public/Images/vila.jpg";
-import vila1 from "../../../../public/Images/vila1.jpg";
 import { getParameterByName } from "../../../helpers/queryString";
-const Portfolio = () => {
-  const cards = [
-    {
-      image: car1,
-      title: "Car 1",
-      short_description:
-        "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores",
-      description:
-        "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From its striking looks, strong character lines, and sculpted creases, this flagship SUV from Lexus is bound to fulfill all of your lifestyle requirements from a car and more. Packed with a twin-turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement, and exceptional fuel economy.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "Lexus-LX600h",
-    },
-    {
-      image: car2,
-      title: "Car 2",
-      short_description:
-        "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model",
-      description:
-        "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it’s been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan.",
-      tags: ["Luxury Car", "Imported Vehicle", "Custom Edition"],
-      category: "Imported Cars",
-      id: "Rolls-Royce-Cullinan-Black-Badge",
-    },
-    {
-      image: car3,
-      title: "Car 3",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-3",
-    },
-    {
-      image: car4,
-      title: "Car 4",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-4",
-    },
-    {
-      image: car5,
-      title: "Car 5",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-5",
-    },
-    {
-      image: car6,
-      title: "Car 6",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-6",
-    },
-    {
-      image: car7,
-      title: "Car 7",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-7",
-    },
-    {
-      image: car8,
-      title: "Car 8",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-8",
-    },
-    {
-      image: car9,
-      title: "Car 9",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-9",
-    },
-    {
-      image: car10,
-      title: "Car 10",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-10",
-    },
-    {
-      image: car11,
-      title: "Car 11",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-11",
-    },
-    {
-      image: car12,
-      title: "Car 12",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-12",
-    },
-    {
-      image: car13,
-      title: "Car 13",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-13",
-    },
-    {
-      image: car14,
-      title: "Car 14",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-14",
-    },
-    {
-      image: car15,
-      title: "Car 15",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Car", "Imported Vehicle", "SUV"],
-      category: "Imported Cars",
-      id: "car-15",
-    },
-    {
-      image: vila,
-      title: "Villa 1",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Home", "Modern Design", "Real Estate"],
-      category: "Luxury Home",
-      id: "villa-1",
-    },
-    {
-      image: vila1,
-      title: "Villa 2",
-      description: "A vibrant shopping destination in the heart of the city.",
-      tags: ["Luxury Home", "Modern Design", "Real Estate"],
-      category: "Luxury Home",
-      id: "villa-2",
-    },
-  ];
+import { projects } from "../../../helpers/projects";
 
+const Portfolio = () => {
   const categories = [
     "All",
     "Roma Coffee Shop",
@@ -178,8 +16,6 @@ const Portfolio = () => {
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  // Get category from query param
   useEffect(() => {
     const categoryFromQuery = getParameterByName("id");
     if (categoryFromQuery && categories.includes(categoryFromQuery)) {
@@ -191,11 +27,10 @@ const Portfolio = () => {
     setSelectedCategory(category);
   };
 
-  // Filter cards based on the selected category
   const filteredCards =
     selectedCategory === "All"
-      ? cards
-      : cards.filter((card) => card.category === selectedCategory);
+      ? projects
+      : projects.filter((card) => card.category === selectedCategory);
   return (
     <div className="bg-white text-black py-16">
       <div className="text-center mb-8">
@@ -214,7 +49,7 @@ const Portfolio = () => {
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-2 py-2 rounded-lg text-sm font-medium ${
+            className={`px-2 py-2 rounded-lg text-sm font-medium cursor-pointer ${
               selectedCategory === category
                 ? "bg-black text-white"
                 : "bg-gray-200 text-gray-600"
