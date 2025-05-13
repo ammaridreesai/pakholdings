@@ -12,11 +12,12 @@ const ValueSection = () => {
           Leadership & Vision
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
-          A Moment of Collaboration with Industry Leaders
+          A Moment of Collaboration with former President of Pakistan
         </h2>
         <p className="text-[16px] text-gray-600">
-          Our CEO engages with renowned professionals to drive innovation and
-          build meaningful partnerships.
+          Our CEO was a very close friend and ally of the President of Pakistan,
+          General Pervez Musharraf. He was an advisor to him on
+          international affairs
         </p>
       </div>
 

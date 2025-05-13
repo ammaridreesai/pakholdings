@@ -106,7 +106,7 @@ export const projects = [
     id: "Toyota-Alphard-MPV-Stallion-Motors-Advertisement-Black",
   },
   {
-    image: [car5,car7],
+    image: [car5, car7],
     title: "Toyota Alphard MPV - Stallion Motors Advertisement - White",
     short_description:
       "Indulge in opulent family travel with our immaculate Lexus LX600h import, offering sophisticated design, advanced hybrid technology, and exceptional comfort for seven passengers.",
@@ -319,9 +319,9 @@ export const projects = [
     image: [vila, vila1],
     title: "Stallion Luxury Home",
     short_description:
-      "Experience unparalleled luxury living in our signature Villa 1, featuring contemporary architecture, panoramic views, and resort-style amenities in an exclusive neighborhood setting.",
+      "Experience unparalleled luxury living in our signature Stallion Luxury Home, featuring contemporary architecture, panoramic views, and resort-style amenities in an exclusive neighborhood setting.",
     description:
-      "Villa 1 offers a spacious and elegant living environment, featuring state-of-the-art amenities, modern design, and panoramic views. With its open-plan layout, expansive windows, and premium finishes, this villa redefines luxury living. Whether you're relaxing by the pool or hosting guests in the grand living room, Villa 1 is the perfect blend of comfort and sophistication.",
+      "Stallion Luxury Home offers a spacious and elegant living environment, featuring state-of-the-art amenities, modern design, and panoramic views. With its open-plan layout, expansive windows, and premium finishes, this villa redefines luxury living. Whether you're relaxing by the pool or hosting guests in the grand living room, Stallion Luxury Home is the perfect blend of comfort and sophistication.",
     tags: [
       "Luxury Home",
       "Modern Design",
@@ -334,8 +334,6 @@ export const projects = [
     category: "Stallion Luxury Home & Land",
     id: "Stallion-Luxury-Home",
   },
-
-
 
   // {
   //   image: [vila1],
@@ -376,9 +374,6 @@ export const projects = [
     id: "The-Grid",
   },
 
-
-
-
   {
     image: [roomaCoffee],
     title: "Roma Coffee Shop",
@@ -418,7 +413,7 @@ export const projects = [
       "Wellness Product",
       "Artisanal Food",
     ],
-
+    link: "https://crestpinksalt.com/",
     category: "Stallion Mining Industry",
     id: "Himalayan-pink-salt",
   },
@@ -426,11 +421,11 @@ export const projects = [
   {
     image: [
       "/Images/mart1.jpg",
-      // "/video/mart_video.mp4", 
-      "/Images/mart2.jpg" ,
-      ],
+      // "/video/mart_video.mp4",
+      "/Images/mart2.jpg",
+    ],
     title: "Stallion Mart",
-    short_description: 
+    short_description:
       "Stallion Mart is a high-end grocery store and lifestyle hub designed to provide a premium shopping experience.",
     description:
       "Stallion Mart is a high-end grocery store and lifestyle hub designed to provide a premium shopping experience. We aim to transform traditional markets into global destinations for imported groceries, luxury goods, and cuttingedge retail tech. Inspired by global brands like Green Valley, Esajees, and Al-Fatah, we are introducing a smart retail experience that integrates technology and convenience for the modern consumer",

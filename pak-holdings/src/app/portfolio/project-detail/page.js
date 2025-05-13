@@ -33,6 +33,7 @@ function PortfolioContent() {
       description={portfolioData.description}
       image={portfolioData.image}
       tags={portfolioData.tags}
+      link={portfolioData.link}
     />
   );
 }

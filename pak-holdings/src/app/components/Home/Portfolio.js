@@ -3,6 +3,23 @@ import Link from "next/link";
 import { projects } from "../../../helpers/projects";
 
 const Portfolio = () => {
+  const customOrder = [
+    "Stallion-Mart",
+    "Rolls-Royce-Cullinan-Black-Badge-1",
+    "Stallion-Luxury-Home",
+    "Roma-Coffee-Shop",
+    "Himalayan-pink-salt",
+  ];
+
+  const filteredOrderedProjects = projects
+    .filter((card) => customOrder.includes(card.id))
+    .sort((a, b) => customOrder.indexOf(a.id) - customOrder.indexOf(b.id))
+    .reduce((acc, card) => {
+      const exists = acc.find((item) => item.category === card.category);
+      if (!exists) acc.push(card);
+      return acc;
+    }, []);
+
   return (
     <div id="portfolio" className="bg-black text-white py-16">
       <div className="text-center mb-16">
@@ -17,14 +34,14 @@ const Portfolio = () => {
 
       <div className="max-w-screen-2xl mx-auto p-5 sm:p-10 md:p-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8">
-          {projects
+          {filteredOrderedProjects
             .filter(
               (card) =>
+                card.id === "Stallion-Mart" ||
                 card.id === "Rolls-Royce-Cullinan-Black-Badge-1" ||
                 card.id === "Stallion-Luxury-Home" ||
                 card.id === "Roma-Coffee-Shop" ||
-                card.id === "Himalayan-pink-salt" ||
-                card.id === "Stallion-Mart"
+                card.id === "Himalayan-pink-salt"
             )
             .reduce((acc, card) => {
               const existingCategory = acc.find(
@@ -41,10 +58,10 @@ const Portfolio = () => {
                 className="rounded overflow-hidden shadow-lg flex flex-col"
               >
                 <div className="relative h-full overflow-hidden">
-                  <a href={card.link}>
+                  <a href={`/portfolio/?id=${card.category}`}>
                     <Image
                       className="w-full h-full object-cover"
-                      src={card.image[0]}  
+                      src={card.image[0]}
                       alt={card.title}
                       width={500}
                       height={300}
@@ -60,8 +77,10 @@ const Portfolio = () => {
                   >
                     {card.category}
                   </a>
-                  <p className="text-gray-500 text-sm">{card.short_description}</p>
-                  
+                  <p className="text-gray-500 text-sm">
+                    {card.short_description}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 my-4">
                     {card.tags.map((tag, index) => (
                       <span
@@ -72,7 +91,18 @@ const Portfolio = () => {
                       </span>
                     ))}
                   </div>
-
+                  {card?.link && (
+                    <div className="mb-4">
+                      <a
+                        href={card.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-xs bg-gray-200 rounded-full px-3 py-1 whitespace-nowrap text-blue-600 hover:underline"
+                      >
+                        Visit Website
+                      </a>
+                    </div>
+                  )}
                   <Link
                     href={`/portfolio/?id=${card.category}`}
                     className="flex items-center"
