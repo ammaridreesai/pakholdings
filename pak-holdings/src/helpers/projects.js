@@ -86,32 +86,32 @@ export const projects = [
     category: "Stallion Motors",
     id: "Honda-NSX-1",
   },
+  // {
+  //   image: [car4],
+  //   title: "Toyota Alphard MPV - Stallion Motors Advertisement - Black",
+  //   short_description:
+  //     "Indulge in opulent family travel with our immaculate Lexus LX600h import, offering sophisticated design, advanced hybrid technology, and exceptional comfort for seven passengers.",
+  //   description:
+  //     "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier, oozes opulence, a fine Nappa leather interior with electric rear doors, a TV system and much more Whether you are the one to be chauffeured, or to be hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of draws, the Alphard tends to your practical and luxury needs We currently have two examples in stock. One being white in exterior colour and the other in black For more details, kindly contact us to make a query and more information",
+  //   tags: [
+  //     "Luxury Car",
+  //     "Imported Vehicle",
+  //     "SUV",
+  //     "Hybrid",
+  //     "Lexus",
+  //     "2024 Model",
+  //     "V6 Engine",
+  //   ],
+  //   category: "Stallion Motors",
+  //   id: "Toyota-Alphard-MPV-Stallion-Motors-Advertisement-Black",
+  // },
   {
-    image: [car4],
-    title: "Toyota Alphard MPV - Stallion Motors Advertisement - Black",
-    short_description:
-      "Indulge in opulent family travel with our immaculate Lexus LX600h import, offering sophisticated design, advanced hybrid technology, and exceptional comfort for seven passengers.",
-    description:
-      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier, oozes opulence, a fine Nappa leather interior with electric rear doors, a TV system and much more Whether you are the one to be chauffeured, or to be hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of draws, the Alphard tends to your practical and luxury needs We currently have two examples in stock. One being white in exterior colour and the other in black For more details, kindly contact us to make a query and more information",
-    tags: [
-      "Luxury Car",
-      "Imported Vehicle",
-      "SUV",
-      "Hybrid",
-      "Lexus",
-      "2024 Model",
-      "V6 Engine",
-    ],
-    category: "Stallion Motors",
-    id: "Toyota-Alphard-MPV-Stallion-Motors-Advertisement-Black",
-  },
-  {
-    image: [car5, car7],
+    image: [car5, car7,car4],
     title: "Toyota Alphard MPV - Stallion Motors Advertisement - White",
     short_description:
-      "Indulge in opulent family travel with our immaculate Lexus LX600h import, offering sophisticated design, advanced hybrid technology, and exceptional comfort for seven passengers.",
+      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan.",
     description:
-      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier, oozes opulence, a fine Nappa leather interior with electric rear doors, a TV system and much more Whether you are the one to be chauffeured, or to be hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of draws, the Alphard tends to your practical and luxury needs We currently have two examples in stock. One being white in exterior colour and the other in black For more details, kindly contact us to make a query and more information",
+      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier oozes opulence, featuring a fine Nappa leather interior with electric rear doors, a TV system, and much more. Whether you are the one to be chauffeured or hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of drawers — the Alphard caters to both practical and luxury needs.",
     tags: [
       "Luxury Car",
       "Imported Vehicle",
@@ -331,7 +331,7 @@ export const projects = [
       "Open Concept",
       "Panoramic Views",
     ],
-    category: "Stallion Luxury Home & Land",
+    category: "Stallion Luxury Home's & Land",
     id: "Stallion-Luxury-Home",
   },
 
@@ -370,7 +370,7 @@ export const projects = [
       "Prime Location",
       "Entertainment Space",
     ],
-    category: "Stallion Luxury Home & Land",
+    category: "Stallion Luxury Home's & Land",
     id: "The-Grid",
   },
 
@@ -396,13 +396,13 @@ export const projects = [
 
   {
     image: [pinksalt],
-    title: "Himalayan Pink Salt",
+    title: "Crest's Pink Salt",
     short_description:
-      "Our Himalayan pink salt provides a variety of benefits, such as balancing body pH, improving hydration.",
+      "Our Crest's pink salt provides a variety of benefits, such as balancing body pH, improving hydration.",
     description:
-      "Our Himalayan pink salt provides a variety of benefits, such as balancing body pH, improving hydration, boosting immunity, supporting digestion, enhancing sleep quality, and offering anti-aging properties. We carefully supervise every step of the process, from mining to processing, to ensure that our pink salt meets the highest quality standards. Our state-of-the-art factory, equipped with advanced technology, preserves the salt's natural properties, guaranteeing a premium product for our customers.",
+      "Our Crest's pink salt provides a variety of benefits, such as balancing body pH, improving hydration, boosting immunity, supporting digestion, enhancing sleep quality, and offering anti-aging properties. We carefully supervise every step of the process, from mining to processing, to ensure that our pink salt meets the highest quality standards. Our state-of-the-art factory, equipped with advanced technology, preserves the salt's natural properties, guaranteeing a premium product for our customers.",
     tags: [
-      "Himalayan Pink Salt",
+      "Crest's Pink Salt",
       "Natural Salt",
       "Mineral-Rich",
       "Gourmet Cooking",
@@ -415,13 +415,13 @@ export const projects = [
     ],
     link: "https://crestpinksalt.com/",
     category: "Stallion Mining Industry",
-    id: "Himalayan-pink-salt",
+    id: "Crests-pink-salt",
   },
 
   {
     image: [
       "/Images/mart1.jpg",
-      // "/video/mart_video.mp4",
+      "https://drive.google.com/file/d/1W4Z2c-TYFg8-qo5sFtGdk-PXly2yIdUb/view?usp=sharing",
       "/Images/mart2.jpg",
     ],
     title: "Stallion Mart",

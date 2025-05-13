@@ -8,7 +8,7 @@ const Portfolio = () => {
     "Rolls-Royce-Cullinan-Black-Badge-1",
     "Stallion-Luxury-Home",
     "Roma-Coffee-Shop",
-    "Himalayan-pink-salt",
+    "Crests-pink-salt",
   ];
 
   const filteredOrderedProjects = projects
@@ -41,7 +41,7 @@ const Portfolio = () => {
                 card.id === "Rolls-Royce-Cullinan-Black-Badge-1" ||
                 card.id === "Stallion-Luxury-Home" ||
                 card.id === "Roma-Coffee-Shop" ||
-                card.id === "Himalayan-pink-salt"
+                card.id === "Crests-pink-salt"
             )
             .reduce((acc, card) => {
               const existingCategory = acc.find(
