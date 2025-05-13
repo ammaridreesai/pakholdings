@@ -12,7 +12,7 @@ export default function Locations() {
           Explore our offices around the globe for your convenience.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 gap-12">
           {/* Pakistan Location */}
           <div>
             <div className="bg-gray-200 rounded-lg shadow-lg overflow-hidden">
@@ -45,7 +45,7 @@ export default function Locations() {
           </div>
 
           {/* New York Location */}
-          <div>
+          {/* <div>
             <div className="bg-gray-200 rounded-lg shadow-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9992202684813!2d-74.00601548459391!3d40.71277577933098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316dcce5b9%3A0xa9c3e6b4e8d6e6f4!2s123+Sample+St%2C+New+York%2C+NY+10000%2C+USA!5e0!3m2!1sen!2s!4v1687947456542!5m2!1sen!2s"
@@ -72,7 +72,7 @@ export default function Locations() {
                 Get Directions
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -29,17 +29,15 @@ const HomeStats = () => {
               </p>
             </div>
           </div>
-          <Link
-            href="#"
-            className=" mt-[50px]  flex items-center justify-center w-[98px] h-[44px] text-[16px] rounded-[12px] border-[1.5px] border-solid border-[#01503c] bg-transparent text-white font-medium border-t-[1.5px] border-r-[1.5px] border-b-[4px] border-l-[1.5px]"
-          >
-            Button
-          </Link>
         </div>
 
         {/* Right Side: Video */}
         <div className="relative w-full h-auto">
-          <video autoPlay className="w-full h-full object-contain rounded-lg" controls>
+          <video
+            autoPlay
+            className="w-full h-full object-contain rounded-lg"
+            controls
+          >
             <source src="/Video/Main_video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

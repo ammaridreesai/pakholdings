@@ -77,11 +77,11 @@ const Footer = () => {
                   Our Services
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#" className="">
                   FAQs
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           {/* <!--End Col--> */}
@@ -135,7 +135,11 @@ const Footer = () => {
             <h4 className="text-[16px] font-medium mb-7">Connect With Us</h4>
             <ul className="text-sm transition-all duration-500">
               <li className="mb-6 flex items-center">
-                <Link target="_blank" href="#" className="">
+                <Link
+                  target="_blank"
+                  href="https://www.facebook.com/share/15N4K76ukc/?mibextid=wwXIfr"
+                  className=""
+                >
                   <Facebook className="mr-3 rounded-full " />{" "}
                   {/* Facebook Icon */}
                   Facebook
@@ -175,7 +179,7 @@ const Footer = () => {
         <div className="py-7 border-t border-gray-200 whitespace-nowrap">
           <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
             <span className="text-sm  ">
-              ©<Link href="/"> pak holdings</Link> 2024, All rights reserved.
+              ©<Link href="/"> pak holdings</Link> 2025, All rights reserved.
             </span>
             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0 ">
               <Link
@@ -190,12 +194,12 @@ const Footer = () => {
               >
                 Terms of Use
               </Link>
-              <Link
+              {/* <Link
                 href="javascript:;"
                 className="text-[14px] flex justify-center items-center "
               >
                 Cookie Settings
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

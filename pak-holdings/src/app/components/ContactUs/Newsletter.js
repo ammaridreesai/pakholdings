@@ -35,7 +35,7 @@ export default function Newsletter() {
 
           <p className="text-sm mt-4">
             By clicking Subscribe Now, you agree to our{" "}
-            <a href="#" className="text-green-500 underline">
+            <a href="/terms_and_condition" className="text-green-500 underline">
               Terms and Conditions
             </a>
             .
