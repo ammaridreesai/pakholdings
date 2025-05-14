@@ -22,22 +22,35 @@ const isVideo = (mediaItem) => {
 
 // ✅ Check if it's an image
 const isImage = (mediaItem) => {
-  if (typeof mediaItem !== "string") return false;
-  return (
-    mediaItem.endsWith(".png") ||
-    mediaItem.endsWith(".jpg") ||
-    mediaItem.endsWith(".jpeg") ||
-    mediaItem.startsWith("/Images")
-  );
+  if (typeof mediaItem === "string") {
+    return (
+      mediaItem.endsWith(".png") ||
+      mediaItem.endsWith(".jpg") ||
+      mediaItem.endsWith(".jpeg") ||
+      mediaItem.startsWith("/Images")
+    );
+  }
+
+  if (typeof mediaItem === "object" && mediaItem.src) {
+    const { src } = mediaItem;
+    return (
+      src.endsWith(".png") ||
+      src.endsWith(".jpg") ||
+      src.endsWith(".jpeg") ||
+      src.startsWith("/Images")
+    );
+  }
+
+  return false;
 };
 
+
 const PortfolioDetailPage = ({ title, description, image, tags, link }) => {
+  // ✅ Ensure all media items are available for thumbnails
   const [mainMedia, setMainMedia] = useState(image[0]);
 
   const handleMediaClick = (clickedMedia) => {
-    if (clickedMedia !== mainMedia) {
-      setMainMedia(clickedMedia);
-    }
+    setMainMedia(clickedMedia);
   };
 
   return (
@@ -64,7 +77,6 @@ const PortfolioDetailPage = ({ title, description, image, tags, link }) => {
               height={500}
             >
               <source src={mainMedia} type="video/mp4" />
-              Your browser does not support the video tag.
             </video>
           ) : (
             <Image
@@ -79,66 +91,65 @@ const PortfolioDetailPage = ({ title, description, image, tags, link }) => {
 
           {/* ✅ Thumbnail Gallery */}
           <div className="grid grid-cols-3 gap-4 mt-4">
-            {image.map((mediaItem, index) => (
-              <div
-                key={index}
-                className="cursor-pointer rounded-lg overflow-hidden"
-                onClick={() => handleMediaClick(mediaItem)}
-              >
-                {isImage(mediaItem) ? (
-                  <Image
-                    src={mediaItem}
-                    alt={`${title} - Media ${index + 1}`}
-                    className={`w-full h-32 object-cover transition duration-300 ${
-                      mediaItem === mainMedia
-                        ? "opacity-50 cursor-not-allowed"
-                        : "hover:opacity-80"
+            {image.map((mediaItem, index) => {
+              const src = typeof mediaItem === "object" ? mediaItem.src : mediaItem;
+
+              return (
+                <div
+                  key={index}
+                  className={`cursor-pointer rounded-lg overflow-hidden transition duration-300 ${src === mainMedia ? "opacity-75 cursor-not-allowed" : "hover:opacity-80"
                     }`}
-                    width={150}
-                    height={150}
-                    unoptimized
-                  />
-                ) : isGoogleDrive(mediaItem) ? (
-                  <div
-                    className={`relative w-full h-32 rounded-lg overflow-hidden transition duration-300 ${
-                      mediaItem === mainMedia
-                        ? "opacity-50 cursor-not-allowed"
-                        : "hover:opacity-80"
-                    }`}
-                  >
-                    {/* Click target */}
-                    <div className="absolute inset-0 z-10" />
-                    {/* Preview-only iframe */}
-                    <iframe
-                      src={getGoogleDriveEmbedUrl(mediaItem)}
-                      className="w-full h-full pointer-events-none"
-                      allow="autoplay"
+                  onClick={() => {
+                    console.log("Clicked Media Item:", src);
+                    handleMediaClick(src);
+                  }}
+                >
+                  {isImage(mediaItem) ? (
+                    <Image
+                      src={src}
+                      alt={`${title} - Media ${index + 1}`}
+                      className="w-full h-32 object-cover rounded-lg"
+                      width={150}
+                      height={150}
+                      unoptimized
                     />
-                    {/* Play icon */}
-                    <div className="absolute inset-0 flex items-center justify-center z-20">
-                      <svg
-                        className="w-8 h-8 text-white opacity-80"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
+                  ) : isGoogleDrive(src) ? (
+                    <div className="relative w-full h-32 bg-black flex items-center justify-center rounded-lg">
+                      <iframe
+                        src={getGoogleDriveEmbedUrl(src)}
+                        className="w-full h-full pointer-events-none"
+                        allow="autoplay"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center z-20">
+                        <svg
+                          className="w-8 h-8 text-white opacity-80"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <video
-                    className={`w-full h-32 object-cover rounded-lg transition duration-300 ${
-                      mediaItem === mainMedia
-                        ? "opacity-50 cursor-not-allowed"
-                        : "hover:opacity-80"
-                    }`}
-                  >
-                    <source src={mediaItem} type="video/mp4" />
-                  </video>
-                )}
-              </div>
-            ))}
+                  ) : isVideo(src) ? (
+                    <video
+                      className="w-full h-32 object-cover rounded-lg"
+                      muted
+                      playsInline
+                    >
+                      <source src={src} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <div className="bg-gray-300 w-full h-32 flex items-center justify-center text-black">
+                      Unknown Format
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
+
+
+
         </div>
 
         {/* ✅ Info Section */}
