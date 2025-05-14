@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Image Section with Custom Height */}
       <div
         className="relative bg-black text-white bg-cover bg-center"
-        style={{ backgroundImage: "url(/Images/Placeholder-Image.png)" }}
+        style={{ backgroundImage: "url(/Images/WebsiteCover.png)" }}
       >
         {/* Black overlay */}
         <div className="absolute inset-0 bg-black opacity-50"></div>

@@ -7,28 +7,44 @@ import car5 from "../../public/Images/cars5.jpg";
 import car6 from "../../public/Images/cars6.jpg";
 import car7 from "../../public/Images/cars7.jpg";
 import car8 from "../../public/Images/cars8.jpg";
-import car9 from "../../public/Images/cars9.jpg";
 import car10 from "../../public/Images/cars10.jpg";
 import car11 from "../../public/Images/cars11.jpg";
 import car12 from "../../public/Images/cars12.jpg";
 import car13 from "../../public/Images/cars13.jpg";
-import car14 from "../../public/Images/cars14.jpg";
-import car15 from "../../public/Images/cars14.jpg";
 import car16 from "../../public/Images/cars15.jpg";
+import car17 from "../../public/Images/cars16.jpg";
+
 // Luxury Home
 import vila from "../../public/Images/vila.jpg";
 import vila1 from "../../public/Images/vila1.jpg";
 import vila2 from "../../public/Images/RDA.jpg";
+
 // Coffee
 import roomaCoffee from "../../public/Images/Roma Coffee.jpg";
+
 // mining
 import pinksalt from "../../public/Images/pink salt.jpg";
-// marts
-import mart1 from "../../public/Images/mart1.jpg";
-import mart2 from "../../public/Images/mart2.jpg";
-// Mart Video
-// import video1 from "../../public/Video/video.mp4";
+
 export const projects = [
+  {
+    image: [car17],
+    title: "Gialo Auge Lamborghini Urus",
+    short_description:
+      "Here at Stallion Motors, we are delighted to showcase this launch specification, Giallo Auge Lamborghini Urus. ",
+    description:
+      "Here at Stallion Motors, we are delighted to showcase this launch specification, Giallo Auge Lamborghini Urus. Supported by a full Lamborghini service history and extended manufacture warranty, this super SUV offers a plethora of fine Italian leather, layers of carbon fibre and a sea of alacantra. Optional extras include, a Bang & Olufson HIFI sound system with signature raising tweeters, soft close doors, 360 degree parking camera, panoramic sunroof with an integrated sun shade, 23” gunmetal grey alloy wheels, contrast gloss black exterior styling package, ambient lighting and cooled seats. f you’re looking for a trendy vehicle that offers opulent luxury, exhilarating performance, carpet like comfort and striking looks from the nation, formed by boutique designers, look no further. For more information, kindly contact us to make a query",
+    tags: [
+      "Luxury Car",
+      "Imported Vehicle",
+      "SUV",
+      "Lamborghini",
+      "2024 Model",
+      "V8 Engine",
+      "Performance Car",
+    ],
+    category: "Stallion Motors",
+    id: "Gialo-Auge-Lamborghini-Urus",
+  },
   {
     image: [car1, car16],
     title: "Lexus LX600h",
@@ -86,25 +102,6 @@ export const projects = [
     category: "Stallion Motors",
     id: "Honda-NSX-1",
   },
-  // {
-  //   image: [car4],
-  //   title: "Toyota Alphard MPV - Stallion Motors Advertisement - Black",
-  //   short_description:
-  //     "Indulge in opulent family travel with our immaculate Lexus LX600h import, offering sophisticated design, advanced hybrid technology, and exceptional comfort for seven passengers.",
-  //   description:
-  //     "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier, oozes opulence, a fine Nappa leather interior with electric rear doors, a TV system and much more Whether you are the one to be chauffeured, or to be hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of draws, the Alphard tends to your practical and luxury needs We currently have two examples in stock. One being white in exterior colour and the other in black For more details, kindly contact us to make a query and more information",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "SUV",
-  //     "Hybrid",
-  //     "Lexus",
-  //     "2024 Model",
-  //     "V6 Engine",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Toyota-Alphard-MPV-Stallion-Motors-Advertisement-Black",
-  // },
   {
     image: [car5, car7, car4],
     title: "Toyota Alphard MPV - Stallion Motors Advertisement",
@@ -143,25 +140,6 @@ export const projects = [
     category: "Stallion Motors",
     id: "Porsche-Macan-S-1",
   },
-  // {
-  //   image: car7,
-  //   title: "Lexus LX600h - White",
-  //   short_description:
-  //     "Conquer any terrain with style in our flagship Lexus LX600h, featuring state-of-the-art hybrid technology, impeccable build quality, and an interior crafted for ultimate passenger comfort.",
-  //   description:
-  //     "Here at Stallion Motors, we are delighted to offer this latest shape, Lexus LX600h fresh from the Japanese shores. From it's striking looks, strong character lines and sculpted creases, this flagship SUV from Lexus, is bound to fulfil all of your lifestyle requirements from a car and more Packed with a twin turbo V6 engine, paired to a potent electric hybrid system, this LX600h is a brawny Swiss Army knife that can amply seat 7 comfortably and offers spritely performance, Japanese reliability, excellent refinement and exceptional fuel economy For more details, kindly contact us to make a query",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "SUV",
-  //     "Hybrid",
-  //     "Lexus",
-  //     "2024 Model",
-  //     "V6 Engine",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Lexus-LX600h-4",
-  // },
   {
     image: [car8, car10],
     title: "Ferrari 458 Italia",
@@ -181,140 +159,6 @@ export const projects = [
     category: "Stallion Motors",
     id: "Ferrari-458-Italia-1",
   },
-  // {
-  //   image: car9,
-  //   title: "Volkswagen Golf R",
-  //   short_description:
-  //     "Experience the thrill of the Volkswagen Golf R – a high-performance hot hatch blending everyday practicality with exhilarating power, advanced 4Motion all-wheel drive, and sporty design.",
-  //   description:
-  //     "Here at Stallion Motors, we are offering this Grade 5, Lapis Blue Metallic, Volkswagen Golf R. It's the definitive hot hatch, that reinvented the hot hatchback category, in the mid 2010's. The Haldex 4 wheel drive, ignites this hatchback and sends it from standstill, to 100km/h, in the low 4 second range This particular example, hosts a set of aftermarket alloy wheels, a body styling exterior kit, keyless entry, keyless start and a panoramic roof. The Golf has always been the car for the people with a sensible mind, but this Golf R, is bound to bring out the petrolhead in you too For more information, kindly contact us to make a query",
-  //   tags: [
-  //     "Hot Hatch",
-  //     "Performance Car",
-  //     "Volkswagen",
-  //     "Golf R",
-  //     "All-Wheel Drive",
-  //     "Turbocharged",
-  //     "European Import",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Volkswagen-Golf-R-1",
-  // },
-  // {
-  //   image: car10,
-  //   title: "Ferrari 458 Italia",
-  //   short_description:
-  //     "Ignite your passion with our meticulously maintained Ferrari 458 Italia in timeless Bianca Avus finish, featuring full service history, carbon fiber accents, and the legendary flat-plane crank V8.",
-  //   description:
-  //     "Here at Stallion Motors, we are proud to offer this Bianca Avus, Ferrari 458 Italia with a full red leather interior. This modern classic super car, needs little introduction. It is the definitive, mid engined Ferrari of the past decade. First on the scenes in 2009, displaying its revolutionary flat plane cranked, 4.5 Litre naturally aspirated V8, delivering a breathtaking 570 bhp, the 458 is the one to have among enthusiasts and collectors This appreciating asset, still looks brand new till this day. The design was conceived by legendary designers, Pininfarina. This particular vehicle, has the essential carbon fibre exterior inlays, nose lift, a full Ferrari service history and has been dry stored for the majority of it's life. Buying this supercar, is not only an experience, but an achievement that the team here at Stallion Motors, is here to facilitate and make a reality",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "Supercar",
-  //     "Italian Engineering",
-  //     "V8 Engine",
-  //     "Pininfarina Design",
-  //     "Collector's Item",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Ferrari-458-Italia-2",
-  // },
-  // {
-  //   image: car11,
-  //   title: "Rolls Royce Cullinan Black Badge MANSORY Edition - White",
-  //   short_description:
-  //     "Make an unforgettable statement with our rare Rolls Royce Cullinan Black Badge MANSORY Edition, featuring exclusive carbon fiber bodywork, 24-inch wheels, and sumptuous orange-accented interior.",
-  //   description:
-  //     "Here at Stallion Motors, we are honoured to offer this bespoke, highly desirable UK model Rolls Royce Cullinan Black Badge. This particular Cullinan is not just your run-of-the-mill version; it's been refined by world-renowned coach builders, Mansory. From its 6.75 litre V12 master craft unit of an engine, carbon fibre body kit, upgraded 24-inch Mansory alloy wheels, to its Black Badge-specific black-on-orange leather interior, this vehicle is ready to make bold statements here in Pakistan. For more details, kindly contact us to make a query",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "Custom Edition",
-  //     "V12 Engine",
-  //     "Mansory",
-  //     "Black Badge",
-  //     "British Luxury",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Rolls-Royce-Cullinan-Black-Badge-2",
-  // },
-  // {
-  //   image: car12,
-  //   title: "Honda NSX",
-  //   short_description:
-  //     "Drive automotive legend with our Honda NSX sports car, featuring Ayrton Senna-tuned handling, perfectly balanced mid-engine layout, and the reliability that makes this Japanese icon a sound investment.",
-  //   description:
-  //     "Here at Stallion Motors, we are delighted to offer a pedigree sports car, that needs no introduction. The Honda NSX is a piece of automotive history. From its initial concept, to it being made into a reality through the combined vision of Honda and legendary Formula 1 driver, Ayrton Senna, this mid engined Japanese icon, with rapidly appreciating value, is bound to be a purchase that not only is appealing to your heart, but a smart one too Packing a 3.0 naturally aspirated V6 engine that rivalled the likes of the performance of a Ferrari 348 at the time and a slick 6 speed manual gearbox, this sports car doesn't only get your blood rushing, but it'll inspire you with confidence, backed up by it's Japanese reliability and cult following For more details, kindly contact us to make a query",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "Sports Car",
-  //     "Japanese Classic",
-  //     "V6 Engine",
-  //     "Manual Transmission",
-  //     "Mid-Engine",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Honda-NSX-2",
-  // },
-  // {
-  //   image: car13,
-  //   title: "Porsche Macan S",
-  //   short_description:
-  //     "Unleash your driving passion with our fully-optioned Porsche Macan S in Glacier White Metallic, featuring Sports Chrono Package, panoramic roof, and Stuttgart's unmistakable performance DNA.",
-  //   description:
-  //     "Here at Stallion Motors, we are delighted to offer this Glacier White Metallic, Porsche Macan S. Boasting a 3.0 Twin Turbo V6 engine and a 7 speed PDK Automatic gearbox, this mini brute in a tuxedo suit, is here to get you from A to B from a standstill, to 100km/h, in under 5 seconds, wherever you go This particular example, is loaded with additional options. From the upgraded 21 Turbo Design alloy wheels, Sports Exhaust Panoramic Sunroof, Extended Leather Package, Sports Chrono Package, 18 Way Adjustable, Heated Memory Sports Seats & much more. This SUV, is a definitive hallmark from the sports car makers, native to Stuttgart, Germany For more details, kindly contact us to make a query",
-  //   tags: [
-  //     "Luxury Car",
-  //     "Imported Vehicle",
-  //     "SUV",
-  //     "German Engineering",
-  //     "Porsche",
-  //     "Twin Turbo",
-  //     "PDK Transmission",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Porsche-Macan-S-2",
-  // },
-  // {
-  //   image: car14,
-  //   title: "Volkswagen Golf R",
-  //   short_description:
-  //     "Experience the thrill of the Volkswagen Golf R – a high-performance hot hatch blending everyday practicality with exhilarating power, advanced 4Motion all-wheel drive, and sporty design.",
-  //   description:
-  //     "Here at Stallion Motors, we are offering this Grade 5, Lapis Blue Metallic, Volkswagen Golf R. It's the definitive hot hatch, that reinvented the hot hatchback category, in the mid 2010's. The Haldex 4 wheel drive, ignites this hatchback and sends it from standstill, to 100km/h, in the low 4 second range This particular example, hosts a set of aftermarket alloy wheels, a body styling exterior kit, keyless entry, keyless start and a panoramic roof. The Golf has always been the car for the people with a sensible mind, but this Golf R, is bound to bring out the petrolhead in you too For more information, kindly contact us to make a query",
-  //   tags: [
-  //     "Hot Hatch",
-  //     "Performance Car",
-  //     "Volkswagen",
-  //     "Golf R",
-  //     "All-Wheel Drive",
-  //     "Turbocharged",
-  //     "European Import",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Volkswagen-Golf-R-2",
-  // },
-  // {
-  //   image: car15,
-  //   title: "Volkswagen Golf R",
-  //   short_description:
-  //     "Experience the thrill of the Volkswagen Golf R – a high-performance hot hatch blending everyday practicality with exhilarating power, advanced 4Motion all-wheel drive, and sporty design.",
-  //   description:
-  //     "Here at Stallion Motors, we are offering this Grade 5, Lapis Blue Metallic, Volkswagen Golf R. It's the definitive hot hatch, that reinvented the hot hatchback category, in the mid 2010's. The Haldex 4 wheel drive, ignites this hatchback and sends it from standstill, to 100km/h, in the low 4 second range This particular example, hosts a set of aftermarket alloy wheels, a body styling exterior kit, keyless entry, keyless start and a panoramic roof. The Golf has always been the car for the people with a sensible mind, but this Golf R, is bound to bring out the petrolhead in you too For more information, kindly contact us to make a query",
-  //   tags: [
-  //     "Hot Hatch",
-  //     "Performance Car",
-  //     "Volkswagen",
-  //     "Golf R",
-  //     "All-Wheel Drive",
-  //     "Turbocharged",
-  //     "European Import",
-  //   ],
-  //   category: "Stallion Motors",
-  //   id: "Volkswagen-Golf-R-3",
-  // },
-
   {
     image: [vila, vila1],
     title: "Stallion Luxury Home",
@@ -334,26 +178,6 @@ export const projects = [
     category: "Stallion Luxury Home's & Land",
     id: "Stallion-Luxury-Home",
   },
-
-  // {
-  //   image: [vila1],
-  //   title: "Stallion Luxury Home",
-  //   short_description:
-  //     "Discover architectural excellence with our Villa 2 property, featuring natural light-filled spaces, private garden sanctuary, and contemporary design perfect for entertaining and tranquil living.",
-  //   description:
-  //     "We believe that bridging and facilitating the purchase and sale of luxury homes, depends on a reputable source with credentials and trust. We establish a fine connection with our clients and make deals that seem virtually not possible, a reality. We negate the risks, eliminate the hassle and manage the in between. Stallion Luxury Homes and Land checks with all housing authorities that we work with, to ensure that your prospect is genuine and provide you with all the legal documents.",
-  //   tags: [
-  //     "Luxury Home",
-  //     "Modern Design",
-  //     "Real Estate",
-  //     "Contemporary Architecture",
-  //     "Private Garden",
-  //     "Prime Location",
-  //     "Entertainment Space",
-  //   ],
-  //   category: "Stallion Luxury Home & Land",
-  //   id: "Stallion-Luxury-Home",
-  // },
   {
     image: [vila2],
     title: "The Grid",
@@ -373,7 +197,6 @@ export const projects = [
     category: "Stallion Luxury Home's & Land",
     id: "The-Grid",
   },
-
   {
     image: [roomaCoffee],
     title: "Roma Coffee Shop",
@@ -393,7 +216,6 @@ export const projects = [
     category: "Roma Coffee Shop",
     id: "Roma-Coffee-Shop",
   },
-
   {
     image: [pinksalt],
     title: "Crest's Pink Salt",
@@ -417,7 +239,6 @@ export const projects = [
     category: "Stallion Mining Industry",
     id: "Crests-pink-salt",
   },
-
   {
     image: [
       "/Images/mart1.jpg",

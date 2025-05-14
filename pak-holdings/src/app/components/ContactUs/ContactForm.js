@@ -27,9 +27,8 @@ export default function ContactForm() {
   };
 
   const handlePhoneChange = (e) => {
-    const formattedPhone = e.target.value.replace(/\D/g, "").slice(0, 10);
-    const phone = `${formattedPhone.slice(0, 4)}-${formattedPhone.slice(4)}`;
-    setFormData({ ...formData, phone });
+    const formattedPhone = e.target.value.replace(/\D/g, "").slice(0, 16);
+    setFormData({ ...formData, phone: formattedPhone });
   };
 
   const validateForm = () => {
@@ -39,9 +38,13 @@ export default function ContactForm() {
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email))
       newErrors.email = "Please enter a valid email";
-    if (!formData.phone) newErrors.phone = "Phone number is required";
-    else if (!/\d{4}-\d{7}/.test(formData.phone))
-      newErrors.phone = "Phone number format should be XXXX-XXXXXXX";
+
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+    } else if (formData.phone.length < 8 || formData.phone.length > 16) {
+      newErrors.phone = "Phone number must be between 8 and 16 digits";
+    }
+
     if (!formData.message) newErrors.message = "Message is required";
     return newErrors;
   };
@@ -59,10 +62,10 @@ export default function ContactForm() {
     // Send form data to EmailJS
     emailjs
       .sendForm(
-        "service_jcrijwn", // Replace with your service ID
-        "template_ztkaygn", // Replace with your template ID
+        "service_vb5tiye", // Replace with your service ID
+        "template_sdslni2", // Replace with your template ID
         e.target,
-        "3UZYaObuM81_HTxpm" // Replace with your user ID
+        "IHT02D8Rbu61mLseO" // Replace with your user ID
       )
       .then(
         (result) => {
@@ -168,7 +171,7 @@ export default function ContactForm() {
               Phone Number
             </label>
             <input
-              type="tel"
+              type="text"
               id="phone"
               name="phone"
               value={formData.phone}
