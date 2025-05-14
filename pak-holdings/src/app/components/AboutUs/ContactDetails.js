@@ -17,7 +17,9 @@ const ContactDetails = () => {
           <p className="text-[16px] font-semibold mb-[16px]">Connect</p>
           <h2 className="text-[48px] font-normal mb-[24px]">Get in Touch</h2>
           <p className="mt-4 text-lg text-gray-500">
-            We`&apos`d love to hear from you!
+            <p className="mt-4 text-lg text-gray-500">
+              {`We'd love to hear from you!`}
+            </p>
           </p>
         </div>
 
@@ -34,7 +36,9 @@ const ContactDetails = () => {
                   <h3 className="text-lg font-medium text-gray-900">Email</h3>
                   <p className="mt-1 text-gray-600">Your email address</p>
                   <p className="mt-1 text-gray-600 underline">
-                    stallions323@yahoo.co.uk stallions323@gmail.com
+                    stallions323@yahoo.co.uk
+                    <br />
+                    stallions323@gmail.com
                   </p>
                 </div>
                 <div className="px-6 py-4">
@@ -44,22 +48,22 @@ const ContactDetails = () => {
                   <h3 className="text-lg font-medium text-gray-900">Phone</h3>
                   <p className="mt-1 text-gray-600">Reach us at</p>
                   <p className="mt-1 text-gray-600 underline">
-                    0319 4530934 {","} +44 7842 507879
+                    0319 4530934
+                    <br />
+                    +44 7842 507879
                   </p>
                 </div>
                 <div className="px-6 py-4">
                   <div className="mb-4">
                     <LocationOnOutlinedIcon />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">
-                    Address
-                  </h3>
+                  <h3 className="text-lg font-medium text-gray-900">Address</h3>
                   <p className="mt-1 text-gray-600">
                     Stallion House, H# 94, Street 11, Sector A, Phase 8, Bahria
-                    town Rawalpindi
+                    Town Rawalpindi
                   </p>
                   <Link target="_blank" href="https://www.google.com/maps">
-                  <p className="mt-1 font-semibold">Find Us {" >"}</p>
+                    <p className="mt-1 font-semibold">Find Us {" >"}</p>
                   </Link>
                 </div>
               </div>

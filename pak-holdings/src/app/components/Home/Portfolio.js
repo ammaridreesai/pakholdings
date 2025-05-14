@@ -5,10 +5,10 @@ import { projects } from "../../../helpers/projects";
 const Portfolio = () => {
   const customOrder = [
     "Stallion-Mart",
-    "Rolls-Royce-Cullinan-Black-Badge-1",
     "Stallion-Luxury-Home",
-    "Roma-Coffee-Shop",
+    "Rolls-Royce-Cullinan-Black-Badge-1",
     "Crests-pink-salt",
+    "Roma-Coffee-Shop",
   ];
 
   const filteredOrderedProjects = projects

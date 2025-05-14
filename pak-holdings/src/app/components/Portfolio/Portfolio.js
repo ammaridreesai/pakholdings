@@ -8,11 +8,11 @@ import { projects } from "../../../helpers/projects";
 const Portfolio = () => {
   const categories = [
     "All",
-    "Roma Coffee Shop",
-    "Stallion Mining Industry",
+    "Stallion Mart",
     "Stallion Luxury Home's & Land",
     "Stallion Motors",
-    "Stallion Mart",
+    "Stallion Mining Industry",
+    "Roma Coffee Shop",
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");

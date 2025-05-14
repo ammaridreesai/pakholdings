@@ -22,12 +22,12 @@ export default function ContactusDetails() {
               </p>
               <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
                 <a href="mailto:hello@relume.io" className="">
-                stallions323@gmail.com
+                  stallions323@gmail.com
                 </a>
               </p>
               <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
                 <a href="mailto:hello@relume.io" className="">
-                stallions323@yahoo.co.uk
+                  stallions323@yahoo.co.uk
                 </a>
               </p>
             </div>
@@ -38,13 +38,12 @@ export default function ContactusDetails() {
               </p>
               <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
                 <a href="tel:03194530934" className="">
-                <strong>Pakistan: </strong>0319 4530934
+                  <strong>Pakistan: </strong>0319 4530934
                 </a>
               </p>
               <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
                 <a href="tel:+447842507879" className="">
-                <strong>England: </strong>+44 7842 507879
-
+                  <strong>England: </strong>+44 7842 507879
                 </a>
               </p>
             </div>
@@ -54,8 +53,8 @@ export default function ContactusDetails() {
                 Visit us at our headquarters for personalized service.
               </p>
               <p className="mt-[16px] text-[16px] leading-[20px] font-normal underline">
-              Stallion House, H# 94, Street 11, Sector A, Phase 8,
-              Bahria town,Rawalpindi
+                Stallion House, H# 94, Street 11, Sector A, Phase 8, Bahria Town
+                ,Rawalpindi
               </p>
             </div>
           </div>

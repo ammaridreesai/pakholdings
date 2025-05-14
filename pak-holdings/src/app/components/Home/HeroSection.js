@@ -18,7 +18,7 @@ const HeroSection = () => {
           <div className="mx-auto flex flex-col items-center py-12 sm:py-24">
             <div className="lg:flex justify-center items-center flex-col mb-5 sm:mb-10">
               <h1 className=" text-[48px] md:text-[56px] text-center font-normal leading-10">
-                Welcome to Pak holdings
+                Welcome to Pak Holdings
               </h1>
               <p className="mt-[24px] sm:mt-10 font-normal text-center text-[18px] leading-[24px]">
                 “We Design, Create & Run Your Business”

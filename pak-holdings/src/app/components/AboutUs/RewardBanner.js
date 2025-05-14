@@ -36,7 +36,7 @@ const RewardBanner = () => {
             Our Recognitions and Awards
           </h2>
           <p className="text-[18px] font-normal leading-[24px]">
-            Pak holdings is proud to be recognized for excellence in investment
+            Pak Holdings is proud to be recognized for excellence in investment
             and development across various sectors.
           </p>
           <div className="flex justify-center lg:justify-start space-x-4 whitespace-nowrap mt-[32px]">
