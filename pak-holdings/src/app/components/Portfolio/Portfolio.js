@@ -18,8 +18,12 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   useEffect(() => {
     const categoryFromQuery = getParameterByName("id");
-    if (categoryFromQuery && categories.includes(categoryFromQuery)) {
-      setSelectedCategory(categoryFromQuery);
+    if (categoryFromQuery) {
+      if (categoryFromQuery === "Stallion Luxury Home's ") {
+        setSelectedCategory("Stallion Luxury Home's & Land");
+      } else if (categories.includes(categoryFromQuery)) {
+        setSelectedCategory(categoryFromQuery);
+      }
     }
   }, []);
 

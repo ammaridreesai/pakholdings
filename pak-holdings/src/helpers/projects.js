@@ -31,7 +31,7 @@ import mart2 from "../../public/Images/mart2.jpg";
 export const projects = [
   {
     image: [car1, car16],
-    title: "Lexus LX600h - Black",
+    title: "Lexus LX600h",
     short_description:
       "Experience the pinnacle of luxury SUVs with our latest 2024 Lexus LX600h, featuring cutting-edge hybrid technology, premium craftsmanship, and unmatched versatility.",
     description:
@@ -50,7 +50,7 @@ export const projects = [
   },
   {
     image: [car2, car11],
-    title: "Rolls Royce Cullinan Black Badge MANSORY Edition - White",
+    title: "Rolls Royce Cullinan Black Badge MANSORY Edition",
     short_description:
       "Discover unparalleled luxury with our bespoke UK-imported Rolls Royce Cullinan white Badge MANSORY Edition, featuring exclusive custom refinements and commanding presence.",
     description:
@@ -106,12 +106,12 @@ export const projects = [
   //   id: "Toyota-Alphard-MPV-Stallion-Motors-Advertisement-Black",
   // },
   {
-    image: [car5, car7,car4],
-    title: "Toyota Alphard MPV - Stallion Motors Advertisement - White",
+    image: [car5, car7, car4],
+    title: "Toyota Alphard MPV - Stallion Motors Advertisement",
     short_description:
       "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan.",
     description:
-      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier oozes opulence, featuring a fine Nappa leather interior with electric rear doors, a TV system, and much more. Whether you are the one to be chauffeured or hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of drawers — the Alphard caters to both practical and luxury needs.",
+      "Here at Stallion Motors, we are delighted to offer you this Toyota Alphard, fresh from the port of Japan. This people carrier oozes opulence, featuring a fine Nappa leather interior with electric rear doors, a TV system, and much more. Whether you are the one to be chauffeured or hauling this substantial unit on the streets of Pakistan with a vehicle full of 10 passengers, this Toyota has it all. The bold chrome garnishing, the fit and finish that resembles the dampened closing of a designer chest of drawers — the Alphard caters to both practical and luxury needs. We currently have two examples in stock. One being white in exterior colour and the other in black. For more details, kindly contact us to make a query and more information",
     tags: [
       "Luxury Car",
       "Imported Vehicle",

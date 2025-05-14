@@ -20,6 +20,10 @@ const images = [
     src: "/Images/stakkion_mart.jpg",
     alt: "Award 4",
   },
+  {
+    src: "/Images/motor-logo (2).png",
+    alt: "Award 5",
+  },
 ];
 
 const RewardBanner = () => {
@@ -54,12 +58,12 @@ const RewardBanner = () => {
         <div className="grid grid-cols-2 md:gap-8 gap-16 md:mt-4 mt-[48px]">
           {images.map((image, index) => (
             <div key={index} className="flex justify-center items-center">
-              <div className="relative w-[132px] h-[132px]">
+              <div className="relative w-[150px] h-[150px]">
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={132}
-                  height={132}
+                  width={150}
+                  height={150}
                   className="rounded-lg object-contain w-full h-full bg-transparent"
                 />
               </div>
