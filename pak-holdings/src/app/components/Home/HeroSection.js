@@ -43,7 +43,7 @@ const HeroSection = () => {
             <div className="flex flex-col justify-start items-center lg:items-start">
               <p className="text-[18px] font-medium mb-[32px] max-w-3xl mx-auto lg:mx-0 leading-[150%]">
                 Welcome to PAK Holdings your trusted partner in luxury real
-                estate, premium salt mining, retail ventures, and high-end
+                estate, premium salt mining, retail ventures, and high end
                 hospitality. From Pakistan to the UK, we empower investors with
                 secure, profitable, and prestigious opportunities.
               </p>
