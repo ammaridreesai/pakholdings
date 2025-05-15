@@ -1,16 +1,28 @@
-"use client"; // Add this line to mark the file as Link client component
+"use client";
 
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import CompanyLogo from "../../../public/Images/logo-1-removebg-preview.png";
 import Image from "next/image";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  LinkedIn,
-  YouTube,
-} from "@mui/icons-material";
+import { Facebook, Instagram, LinkedIn } from "@mui/icons-material";
+
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [isInvalidEmail, setIsInvalidEmail] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValidEmail = /\S+@\S+\.\S+/.test(email);
+    if (isValidEmail) {
+      setShowSuccess(true);
+      setEmail("");
+      setIsInvalidEmail(false); // Reset invalid state
+      setTimeout(() => setShowSuccess(false), 5000);
+    } else {
+      setIsInvalidEmail(true); // Show red border
+    }
+  };
   return (
     <footer className="w-full bg-black text-white">
       <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-16">
@@ -33,17 +45,26 @@ const Footer = () => {
               releases.
             </p>
 
-            <form className="flex items-center max-w-lg mx-aut">
+            <form
+              onSubmit={handleSubmit}
+              className="flex items-center max-w-lg mx-aut"
+            >
               <label htmlFor="voice-search" className="sr-only">
                 Search
               </label>
               <div className="relative w-full">
                 <input
                   type="text"
-                  id="voice-search"
-                  className="bg- border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-gray-700 block w-full  p-2.5 "
+                  id="email"
+                  className={`border text-white text-sm rounded-lg focus:ring-blue-500 focus:border-gray-700 block w-full p-2.5 ${
+                    isInvalidEmail ? "border-red-500" : "border-gray-300"
+                  }`}
                   placeholder="Your Email Here"
-                  required
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (isInvalidEmail) setIsInvalidEmail(false); // Clear red border on change
+                  }}
                 />
               </div>
               <button
@@ -53,6 +74,16 @@ const Footer = () => {
                 Join
               </button>
             </form>
+            {isInvalidEmail && (
+              <div className="mt-2 text-red-500 text-sm">
+                Please enter a valid email address.
+              </div>
+            )}
+            {showSuccess && (
+              <div className="mt-4 text-green-600">
+                Newsletter has been subscribed successfully!
+              </div>
+            )}
             <p className="py-8 text-sm  lg:max-w-lg text-start lg:text-left">
               By subscribing, you agree to our Privacy Policy and consent to
               receive updates.

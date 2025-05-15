@@ -60,10 +60,10 @@ const Portfolio = () => {
                 <div className="relative h-full overflow-hidden">
                   <a href={`/portfolio/?id=${card.category}`}>
                     <Image
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-fit"
                       src={card.image[0]}
                       alt={card.title}
-                      width={500}
+                      width={300}
                       height={300}
                       unoptimized
                     />

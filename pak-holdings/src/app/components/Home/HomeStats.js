@@ -6,7 +6,6 @@ const HomeStats = () => {
       <div className="max-w-screen-x mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 sm:px-16">
         {/* Left Side: Text */}
         <div className="flex flex-col items-start justify-center text-start lg:text-left">
-          <p className="font-semibold text-[16px] text-white">Projects</p>
           <h2 className="md:text-[48px] text-[36px] font-normal max-w-lg text-[#fff] mb-4">
             Driving Excellence Through Milestones and Impactful Projects
           </h2>

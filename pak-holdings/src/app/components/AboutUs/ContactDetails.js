@@ -14,16 +14,13 @@ const ContactDetails = () => {
     <div className="bg-gray-100">
       <div className="p-4 md:p-16">
         <div className="px-4 text-start">
-          <p className="text-[16px] font-semibold mb-[16px]">Connect</p>
-          <h2 className="text-[48px] font-normal mb-[24px]">Get in Touch</h2>
+          <p className="text-[48px] font-normal mb-[24px]">Connect</p>
           <p className="mt-4 text-lg text-gray-500">
-            <p className="mt-4 text-lg text-gray-500">
-              {`We'd love to hear from you!`}
-            </p>
+            {`We'd love to hear from you!`}
           </p>
         </div>
 
-        <div className="mt-16 lg:mt-20">
+        <div className="mt-16 lg:mt-15">
           {/* Grid layout for content and map */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Content Section */}

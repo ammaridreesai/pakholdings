@@ -8,13 +8,13 @@ const ValueSection = () => {
     <div className="bg-[#CCE1DB] py-16">
       {/* Heading Section */}
       <div className="text-center mb-16">
-        <p className="mb-2 text-base sm:text-lg md:text-xl text-gray-700">
+        <p className="mb-2 text-base sm:text-lg md:text-xl text-gray-700 font-bold">
           Leadership & Vision
         </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
+        <h2 className="text-2xl sm:text-2xl md:text-2xl font-semibold mb-4">
           A Moment of Collaboration with former President of Pakistan
         </h2>
-        <p className="text-[16px] text-gray-600">
+        <p className="text-[16px] text-gray-600 font-semibold">
           Our CEO was a very close friend and ally of the President of Pakistan,
           General Pervez Musharraf. He was an advisor to him on
           international affairs
